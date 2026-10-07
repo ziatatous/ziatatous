@@ -67,3 +67,16 @@ def test_mark_read_and_source_edit(client):
     body = {"name": "Test Media", "country": "FR", "type": "online", "homepage": "http://t", "ownership": {"type": "private", "chain": []}}
     assert client.put("/api/sources/testmedia", json=body).json()["ok"]
     assert client.get("/api/sources/testmedia").json()["name"] == "Test Media"
+
+
+def test_eu_dossier_and_leaders(client):
+    from app.collectors.sources_loader import node, edge
+    add_article("euractiv", "EU ministers agree new defence fund for the European Union", "BE", "en", "European Union defence")
+    with db.session() as con:
+        node(con, "state:FR", "France", "state", "FR"); node(con, "wd:Q1", "A Leader", "person", "FR", "Q1")
+        edge(con, "wd:Q1", "state:FR", "head_of_state", "https://www.wikidata.org/wiki/Q1")
+    eu = client.get("/api/world/country/EU").json()
+    assert eu["country"]["name"] == "European Union" and eu["local_news"][0]["source_id"] == "euractiv"
+    fr = client.get("/api/world/country/FR").json()
+    assert fr["leaders"] == [{"name": "A Leader", "role": "head_of_state", "url": "https://www.wikidata.org/wiki/Q1"}]
+    assert client.get("/api/world/country/ZZ").status_code == 404

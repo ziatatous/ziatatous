@@ -109,3 +109,26 @@ def company_people(company_id: str, qid: str) -> int:
 
 
 register(Collector("wikidata_sources", "sources", 10080, reverify_all))
+
+
+def leaders() -> int:
+    """Current heads of state / government per country (Wikidata P35 / P6 statements without an end date)."""
+    from ..countries import COUNTRIES
+    codes = " ".join(f'"{c}"' for c in COUNTRIES)
+    rows = sparql(f"""SELECT ?code ?role ?p ?pLabel WHERE {{
+      VALUES ?code {{ {codes} }} ?c wdt:P297 ?code .
+      {{ ?c p:P35 ?st . ?st ps:P35 ?p . BIND("head_of_state" AS ?role) }} UNION {{ ?c p:P6 ?st . ?st ps:P6 ?p . BIND("head_of_government" AS ?role) }}
+      FILTER NOT EXISTS {{ ?st pq:P582 ?end }}
+      SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en,fr,es". }} }}""")
+    n = 0
+    with db.session() as con:
+        for r in rows:
+            pq = qid_of(r["p"])
+            node(con, f"state:{r['code']}", COUNTRIES[r["code"]]["name"], "state", r["code"])
+            node(con, f"wd:{pq}", r.get("pLabel", pq), "person", r["code"], pq)
+            edge(con, f"wd:{pq}", f"state:{r['code']}", r["role"], f"https://www.wikidata.org/wiki/{pq}", 1.0, r["role"].replace("_", " "))
+            n += 1
+    return n
+
+
+register(Collector("wikidata_leaders", "graph", 4320, leaders))

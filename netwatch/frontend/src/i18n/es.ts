@@ -1,0 +1,5 @@
+export default {
+  nav: { briefing: 'Resumen', topics: 'Temas', sources: 'Fuentes', world: 'Mundo', corpos: 'Corpos', vitals: 'Signos vitales', power: 'Red de poder', official: 'Oficial', alerts: 'Alertas', agenda: 'Agenda', watch: 'Seguimiento', search: 'Búsqueda', languages: 'Idiomas', system: 'Sistema', design: 'Diseño' },
+  common: { loading: 'Cargando…', empty: 'Nada por ahora', markRead: 'Marcar como leído', original: 'Original', translated: 'Traducido', bilingual: 'Bilingüe', machine: 'traducción automática', openOriginal: 'Abrir original', source: 'Fuente', verified: 'verificado', toVerify: 'por verificar', search: 'Buscar', close: 'Cerrar', save: 'Guardar', add: 'Añadir', remove: 'Quitar', calm: 'Modo calma', scanlines: 'Líneas de barrido', sound: 'Sonidos', legend: 'Leyenda de colores', shortcuts: 'Atajos de teclado' },
+  briefing: { since: 'Desde tu última visita', topics: 'Temas del día', weak: 'Señales débiles', decided: 'Lo que realmente se decidió', agenda: 'Próximas 72 h' },
+}

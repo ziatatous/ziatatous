@@ -446,29 +446,51 @@ def world_countries():
     return list(COUNTRIES.values())
 
 
+EU_SOURCES = ("euractiv", "politico_eu", "euobserver", "euronews", "europarl", "ecb_press", "ecfr", "bruegel")
+EU_QUERY = '"European Union" OR "Union européenne" OR "Unión Europea" OR "Europäische Union"'
+
+
+def _leaders(code: str) -> list[dict]:
+    return db.rows("""SELECT n.label name, e.rel role, e.source_url url FROM graph_edges e JOIN graph_nodes n ON n.id=e.src
+                      WHERE e.dst=? AND e.rel IN ('head_of_state','head_of_government') ORDER BY e.rel""", (f"state:{code}",))
+
+
 @router.get("/world/country/{code}")
 def country_dossier(code: str):
     code = code.upper()
-    c = COUNTRIES.get(code)
+    eu = code == "EU"
+    c = {"code": "EU", "continent": "EU", "region": "European Union", "name": "European Union", "lat": 50.85, "lon": 4.35} if eu else COUNTRIES.get(code)
     if not c:
         raise HTTPException(404)
-    srcs = db.rows("SELECT id,name,ownership_type,type FROM sources WHERE country=?", (code,))
-    local = db.rows(f"SELECT {ART_COLS} FROM articles a LEFT JOIN sources s ON s.id=a.source_id WHERE a.country=? ORDER BY a.published_at DESC LIMIT 25", (code,))
-    foreign = db.rows(f"""SELECT {ART_COLS} FROM articles a LEFT JOIN sources s ON s.id=a.source_id WHERE a.country!=? AND a.id IN
-        (SELECT rowid FROM articles_fts WHERE articles_fts MATCH ?) ORDER BY a.published_at DESC LIMIT 25""", (code, f'"{c["name"]}"'))
-    ev = db.rows("SELECT kind,ts,magnitude,title,url,source FROM events WHERE country=? AND ts>=? ORDER BY ts DESC LIMIT 40", (code, db.ts_ago(30 * 86400)))
-    off = db.rows("""SELECT id,origin,ts,title,url FROM official_docs WHERE country=? OR id IN
-        (SELECT rowid FROM official_fts WHERE official_fts MATCH ?) ORDER BY ts DESC LIMIT 15""", (code, f'"{c["name"]}"'))
-    wb = db.rows("""SELECT m.series,m.label,m.unit,m.source,m.source_url,
-        (SELECT value FROM indicators i WHERE i.series=m.series ORDER BY ts DESC LIMIT 1) value,
-        (SELECT ts FROM indicators i WHERE i.series=m.series ORDER BY ts DESC LIMIT 1) ts
-        FROM indicator_meta m WHERE m.series LIKE ?""", (f"WB:{_iso3(code)}:%",))
-    comps = db.rows("SELECT id,name,sector FROM companies WHERE country=?", (code,))
-    rsf = db.one("SELECT value FROM indicators WHERE series=? ORDER BY ts DESC LIMIT 1", (f"RSF:{code}:rank",))
+    if eu:
+        marks = ",".join("?" * len(EU_SOURCES))
+        srcs = db.rows(f"SELECT id,name,ownership_type,type FROM sources WHERE id IN ({marks}) OR country='EU'", EU_SOURCES)
+        local = db.rows(f"SELECT {ART_COLS} FROM articles a LEFT JOIN sources s ON s.id=a.source_id WHERE a.source_id IN ({marks}) ORDER BY a.published_at DESC LIMIT 25", EU_SOURCES)
+        foreign = db.rows(f"""SELECT {ART_COLS} FROM articles a LEFT JOIN sources s ON s.id=a.source_id WHERE a.source_id NOT IN ({marks}) AND a.id IN
+            (SELECT rowid FROM articles_fts WHERE articles_fts MATCH ?) ORDER BY a.published_at DESC LIMIT 25""", (*EU_SOURCES, EU_QUERY))
+        off = db.rows("SELECT id,origin,ts,title,url FROM official_docs WHERE origin IN ('eurlex','europarl') OR country='EU' ORDER BY ts DESC LIMIT 20")
+        wb = db.rows("""SELECT m.series,m.label,m.unit,m.source,m.source_url,
+            (SELECT value FROM indicators i WHERE i.series=m.series ORDER BY ts DESC LIMIT 1) value,
+            (SELECT ts FROM indicators i WHERE i.series=m.series ORDER BY ts DESC LIMIT 1) ts
+            FROM indicator_meta m WHERE m.series LIKE 'ECB:%' OR m.series LIKE 'ESTAT:%'""")
+        ev, comps, rsf = [], [], None
+    else:
+        srcs = db.rows("SELECT id,name,ownership_type,type FROM sources WHERE country=?", (code,))
+        local = db.rows(f"SELECT {ART_COLS} FROM articles a LEFT JOIN sources s ON s.id=a.source_id WHERE a.country=? ORDER BY a.published_at DESC LIMIT 25", (code,))
+        foreign = db.rows(f"""SELECT {ART_COLS} FROM articles a LEFT JOIN sources s ON s.id=a.source_id WHERE a.country!=? AND a.id IN
+            (SELECT rowid FROM articles_fts WHERE articles_fts MATCH ?) ORDER BY a.published_at DESC LIMIT 25""", (code, f'"{c["name"]}"'))
+        ev = db.rows("SELECT kind,ts,magnitude,title,url,source FROM events WHERE country=? AND ts>=? ORDER BY ts DESC LIMIT 40", (code, db.ts_ago(30 * 86400)))
+        off = db.rows("""SELECT id,origin,ts,title,url FROM official_docs WHERE country=? OR id IN
+            (SELECT rowid FROM official_fts WHERE official_fts MATCH ?) ORDER BY ts DESC LIMIT 15""", (code, f'"{c["name"]}"'))
+        wb = db.rows("""SELECT m.series,m.label,m.unit,m.source,m.source_url,
+            (SELECT value FROM indicators i WHERE i.series=m.series ORDER BY ts DESC LIMIT 1) value,
+            (SELECT ts FROM indicators i WHERE i.series=m.series ORDER BY ts DESC LIMIT 1) ts
+            FROM indicator_meta m WHERE m.series LIKE ?""", (f"WB:{_iso3(code)}:%",))
+        comps = db.rows("SELECT id,name,sector FROM companies WHERE country=?", (code,))
+        rsf = db.one("SELECT value FROM indicators WHERE series=? ORDER BY ts DESC LIMIT 1", (f"RSF:{code}:rank",))
     agenda_ = db.rows("SELECT date,kind,title,url FROM agenda WHERE country=? AND date>=? ORDER BY date LIMIT 10", (code, time.strftime("%Y-%m-%d")))
-    leaders = [r for r in db.rows("SELECT label FROM graph_nodes WHERE country=? AND type='person' LIMIT 5", (code,))]
     return dict(country=c, local_sources=srcs, local_news=local, foreign_news=foreign, events=ev, official=off, indicators=wb,
-                companies=comps, press_freedom_rank=rsf and rsf["value"], agenda=agenda_, people=leaders)
+                companies=comps, press_freedom_rank=rsf and rsf["value"], agenda=agenda_, leaders=_leaders(code))
 
 
 _ISO3 = {"FR": "FRA", "ES": "ESP", "DE": "DEU", "IT": "ITA", "US": "USA", "CN": "CHN", "GB": "GBR", "JP": "JPN", "BR": "BRA", "IN": "IND"}
