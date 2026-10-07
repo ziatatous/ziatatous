@@ -5,7 +5,7 @@ import logging
 import time
 
 from .. import config, db, http
-from .base import Collector, register
+from .base import Collector, Skip, register
 
 log = logging.getLogger("netwatch.markets")
 
@@ -80,7 +80,7 @@ def quotes() -> int:
 def fred() -> int:
     k = config.key("FRED_API_KEY")
     if not k:
-        raise RuntimeError("FRED_API_KEY not set (free, see .env.example)")
+        raise Skip("FRED_API_KEY not set (free key, see .env.example)")
     n = 0
     start = time.strftime("%Y-%m-%d", time.gmtime(time.time() - 11 * 365 * 86400))
     for sid, (label, unit, group) in FRED.items():

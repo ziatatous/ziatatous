@@ -13,7 +13,7 @@ import feedparser
 from .. import config, db, http
 from ..processing import text
 from . import markets
-from .base import Collector, register
+from .base import Collector, Skip, register
 from .rss import load_yaml
 from .sources_loader import edge, node, slug
 
@@ -103,7 +103,9 @@ def _norm_issuer(s: str) -> str:
 
 
 def parse_13f_infotable(xml_text: str) -> list[dict]:
-    xml_text = re.sub(r'xmlns(:\w+)?="[^"]+"', "", xml_text)
+    xml_text = re.sub(r'\sxmlns(:\w+)?="[^"]*"', "", xml_text)       # namespace declarations
+    xml_text = re.sub(r'\s[\w-]+:[\w-]+="[^"]*"', "", xml_text)       # prefixed attributes (xsi:schemaLocation…)
+    xml_text = re.sub(r"<(/?)[\w-]+:", r"<\1", xml_text)               # prefixed tags (ns1:infoTable → infoTable)
     root = ET.fromstring(xml_text)
     out = []
     for it in root.iter("infoTable"):
@@ -129,8 +131,8 @@ def edgar_13f() -> int:
     for mname, cik in MANAGERS.items():
         try:
             sub = _edgar(f"https://data.sec.gov/submissions/CIK{cik:010d}.json").json()
-            if mname.split()[0].lower() not in sub.get("name", "").lower() and mname.split()[0].lower() not in " ".join(
-                    x.get("name", "") for x in sub.get("formerNames", [])).lower():
+            names = (sub.get("name", "") + " " + " ".join(x.get("name", "") for x in sub.get("formerNames", []))).lower()
+            if not any(w in names for w in re.sub(r"[^a-z ]", " ", mname.lower()).split() if len(w) > 2):
                 log.warning("13F manager %s: CIK %s resolves to %r — skipped, fix MANAGERS", mname, cik, sub.get("name"))
                 continue
             rec = sub["filings"]["recent"]
@@ -180,7 +182,7 @@ def lda() -> int:
         for y in (year - 2, year - 1, year):
             r = http.get("https://lda.senate.gov/api/v1/filings/", params={"client_name": nm, "filing_year": y, "page_size": 100}, headers=hdr)
             if r.status_code in (401, 403):
-                raise RuntimeError("LDA API refused the request: set LDA_API_KEY (see .env.example)")
+                raise Skip("LDA API refused the request: set LDA_API_KEY (see .env.example)")
             if r.status_code != 200:
                 continue
             for f in r.json().get("results", []):

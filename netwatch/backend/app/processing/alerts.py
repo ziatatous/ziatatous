@@ -12,7 +12,7 @@ DEFAULT_RULES = [
     dict(id="gdacs_orange", name="GDACS orange alert", kind="gdacs", params=dict(levels=["Orange"]), level="VIGILANCE"),
     dict(id="gdacs_red", name="GDACS red alert", kind="gdacs", params=dict(levels=["Red"]), level="CRITICAL"),
     dict(id="coverage_spike", name="Coverage spike (>=3x mean, >=3 countries)", kind="coverage_spike",
-         params=dict(factor=3.0, min_countries=3, min_sources=5), level="INFO"),
+         params=dict(factor=4.0, min_countries=4, min_sources=8, max_per_run=3), level="INFO"),
     dict(id="market_move", name="Market move beyond threshold", kind="market_move", params=dict(pct=3.0), level="VIGILANCE"),
     dict(id="market_crash", name="Market move beyond 7 %", kind="market_move", params=dict(pct=7.0), level="CRITICAL"),
     dict(id="sanction_tracked", name="New sanction on a tracked entity", kind="sanction", params={}, level="CRITICAL"),
@@ -23,6 +23,10 @@ DEFAULT_RULES = [
 
 
 def seed() -> None:
+    # migrate the first (too noisy) default of the coverage-spike rule
+    db.execute("UPDATE alert_rules SET params=? WHERE id='coverage_spike' AND params=?",
+               (json.dumps(dict(factor=4.0, min_countries=4, min_sources=8, max_per_run=3)),
+                json.dumps(dict(factor=3.0, min_countries=3, min_sources=5))))
     for r in DEFAULT_RULES:
         db.execute("INSERT OR IGNORE INTO alert_rules(id,name,kind,params,level,enabled) VALUES(?,?,?,?,?,1)",
                    (r["id"], r["name"], r["kind"], json.dumps(r["params"]), r["level"]))
@@ -61,12 +65,17 @@ def evaluate() -> int:
                 rows = db.rows("SELECT id,n_sources,n_countries,score,label_article_id FROM clusters WHERE last_seen>=?", (since,))
                 if len(rows) >= 5:
                     mean = sum(c["n_sources"] for c in rows) / len(rows)
-                    for c in rows:
+                    n_emitted = 0
+                    for c in sorted(rows, key=lambda x: -x["score"]):
+                        if n_emitted >= p.get("max_per_run", 3):
+                            break
                         if c["n_sources"] >= p["min_sources"] and c["n_sources"] >= p["factor"] * mean and c["n_countries"] >= p["min_countries"]:
                             a = db.one("SELECT title FROM articles WHERE id=?", (c["label_article_id"],)) or {"title": "?"}
-                            fired += _emit(r, f"{r['id']}:{c['id']}", a["title"],
-                                           dict(cluster_id=c["id"], sources=c["n_sources"], countries=c["n_countries"],
-                                                mean_sources=round(mean, 2)))
+                            ok_ = _emit(r, f"{r['id']}:{c['id']}", a["title"],
+                                        dict(cluster_id=c["id"], sources=c["n_sources"], countries=c["n_countries"],
+                                             mean_sources=round(mean, 2)))
+                            fired += ok_
+                            n_emitted += ok_
             elif k == "market_move":
                 for m in db.rows("SELECT * FROM indicator_meta WHERE group_name IN ('markets','fx','commodities','crypto')"):
                     pts = db.rows("SELECT ts,value FROM indicators WHERE series=? ORDER BY ts DESC LIMIT 2", (m["series"],))

@@ -42,8 +42,8 @@ export default function System() {
           <tbody>{s.collectors.map((c: any) => (
             <tr key={c.name}><td className="mono">{c.name}{c.needs && <div className="text-[10px] text-dim">needs {c.needs}</div>}</td><td>{c.family}</td><td className="mono text-xs">{c.interval_min}m</td>
               <td className="mono text-xs">{c.last_success ? ago(c.last_success) : <span className="text-yellow">never</span>}</td>
-              <td>{c.running ? <Chip tone="cyan">running</Chip> : c.last_run ? <Chip tone={c.last_run.ok ? 'green' : 'red'}>{c.last_run.ok ? `ok · ${c.last_run.items}` : 'failed'}</Chip> : <Chip>idle</Chip>}</td>
-              <td className="mono">{c.total_items}</td><td className="text-xs text-red max-w-[360px]">{c.last_run && !c.last_run.ok ? c.last_run.error : ''}</td>
+              <td>{c.running ? <Chip tone="cyan">running</Chip> : c.last_run ? (c.last_run.ok && (c.last_run.error || '').startsWith('skipped') ? <Chip tone="yellow" title={c.last_run.error}>skipped</Chip> : <Chip tone={c.last_run.ok ? 'green' : 'red'}>{c.last_run.ok ? `ok · ${c.last_run.items}` : 'failed'}</Chip>) : <Chip>idle</Chip>}</td>
+              <td className="mono">{c.total_items}</td><td className="text-xs text-red max-w-[360px]">{c.last_run?.error ? <span style={{ color: c.last_run.ok ? 'var(--text-dim)' : undefined }}>{c.last_run.error}</span> : ''}</td>
               <td><button className="btn ghost !py-0" onClick={() => act(() => post(`/api/system/collect?name=${c.name}`), `${c.name} started`)}>run</button></td></tr>))}</tbody></table></div>
       </Panel>}
       {tab === 'feeds' && <Panel title="RSS feeds" actions={<><label className="text-xs"><input type="checkbox" checked={onlyBad} onChange={(e) => setOnlyBad(e.target.checked)} /> problems only</label><button className="btn cyan" onClick={() => act(() => post('/api/system/feeds/check'), 'feed check started (takes a few minutes)')}>Test all feeds</button></>}>

@@ -98,6 +98,9 @@ Regroupement multilingue plus précis (optionnel) : `pip install sentence-transf
 
 ## 8. En cas de problème
 
+- **Lenteur / chargement difficile** : ne place **pas** le dossier dans OneDrive, Dropbox ou iCloud (la synchronisation verrouille la base SQLite et indexe des milliers de fichiers). Mets-le par exemple dans `C:\netwatch`. Les 5 à 10 premières minutes sont aussi les plus lourdes (collecte initiale de tout) ; ensuite l'appli est fluide.
+- Un collecteur « skipped » (jaune) n'est pas une panne : il attend une clé gratuite (`.env`) ou le service bloque les scripts.
+
 - « Python/Node introuvable » : réinstalle-les en cochant l'option PATH, puis rouvre le terminal.
 - Page blanche : dans le terminal du lancement, regarde les messages d'erreur ; essaie `./start.sh --rebuild`.
 - Un collecteur est rouge dans **Système** : le message d'erreur est affiché ; les autres continuent de fonctionner.

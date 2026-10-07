@@ -8,7 +8,7 @@ import feedparser
 
 from .. import config, db, http
 from ..processing import text
-from .base import Collector, register
+from .base import Collector, Skip, register
 
 log = logging.getLogger("netwatch.official")
 
@@ -34,6 +34,8 @@ def _store(origin: str, uid: str, ts: str, title: str, url: str, summary: str = 
 
 def _feed(url: str, origin: str, country: str) -> int:
     r = http.get(url)
+    if r.status_code in (401, 403) and origin == "jorf":
+        raise Skip("Légifrance blocks automated RSS access (403); the PISTE API (free account) is the alternative, see docs/ROADMAP.md")
     r.raise_for_status()
     n = 0
     for e in feedparser.parse(r.content).entries[:100]:

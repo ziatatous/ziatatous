@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useEffect, useRef, useState } from 'react'
 import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
@@ -36,9 +36,13 @@ export default function Shell({ children }: { children: ReactNode }) {
   // expire "immersion day" the next day
   useEffect(() => { if (ui.immersionDay && ui.immersionDay !== new Date().toISOString().slice(0, 10)) ui.set({ immersionDay: null, uiLang: 'en' }) }, []) // eslint-disable-line
 
+  const burst = useRef<ReturnType<typeof setTimeout> | null>(null)
   useSSE((e) => {
     if (e.kind === 'alert') {
-      qc.invalidateQueries({ queryKey: ['/api/alerts/active'] }); qc.invalidateQueries({ queryKey: ['/api/alerts'] })
+      // alerts often arrive in bursts: refresh once, not once per alert
+      if (burst.current) clearTimeout(burst.current)
+      burst.current = setTimeout(() => { qc.invalidateQueries({ queryKey: ['/api/alerts/active'] }); qc.invalidateQueries({ queryKey: ['/api/alerts'] }) }, 1500)
+      if (e.level === 'INFO') return // INFO: no sound, no desktop notification
       if (ui.sound) playAlert(e.level)
       if (ui.notify && 'Notification' in window && Notification.permission === 'granted') new Notification(`NETWATCH · ${e.level}`, { body: e.title })
     }
@@ -62,8 +66,9 @@ export default function Shell({ children }: { children: ReactNode }) {
   }, [chord, ui, nav])
 
   const badge = (to: string): number => {
-    if (to === '/') return startup.data?.new_articles ?? 0
-    if (to === '/alerts') return active.data?.length ?? 0
+    // no "99+" on the very first visit (everything is new): the badge starts after the first "mark as read"
+    if (to === '/') return startup.data?.last_visit ? startup.data?.new_articles ?? 0 : 0
+    if (to === '/alerts') return (active.data || []).filter((a: any) => a.level !== 'INFO').length
     return 0
   }
   const failing = startup.data?.collectors_failing?.length ?? 0

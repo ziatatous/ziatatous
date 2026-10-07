@@ -13,6 +13,10 @@ _running: set[str] = set()
 _run_lock = threading.Lock()
 
 
+class Skip(Exception):
+    """Collector not configured / blocked by the provider: recorded as 'skipped', never as a failure."""
+
+
 @dataclass
 class Collector:
     name: str
@@ -30,6 +34,8 @@ class Collector:
         ok, items, error = 1, 0, None
         try:
             items = int(self.fn() or 0)
+        except Skip as e:
+            error = f"skipped: {e}"
         except Exception as e:  # noqa: BLE001 - isolation is the whole point
             ok, error = 0, f"{type(e).__name__}: {e}"
             log.warning("collector %s failed: %s\n%s", self.name, error, traceback.format_exc(limit=3))

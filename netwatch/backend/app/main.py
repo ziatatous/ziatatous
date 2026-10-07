@@ -14,6 +14,8 @@ from .api import bus, routes
 from .processing import alerts
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)-7s %(name)s: %(message)s")
+for _n in ("httpx", "httpcore", "apscheduler"):
+    logging.getLogger(_n).setLevel(logging.WARNING)  # one INFO line per request floods the console
 log = logging.getLogger("netwatch")
 
 
@@ -76,7 +78,7 @@ def main() -> None:
         while True:
             time.sleep(3600)
     app.state.no_collect = a.no_collect
-    uvicorn.run(app, host=a.host, port=a.port, log_level="info")
+    uvicorn.run(app, host=a.host, port=a.port, log_level="warning", access_log=False)
 
 
 if __name__ == "__main__":

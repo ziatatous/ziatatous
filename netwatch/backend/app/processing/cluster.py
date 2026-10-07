@@ -49,11 +49,11 @@ def _pairs_above(X, thr: float, block: int = 400):
         b = min(n, a + block)
         S = X[a:b] @ X[:b].T  # rows a..b vs earlier+same block
         S = S.toarray() if sp else np.asarray(S)
-        for r in range(b - a):
+        rows_, cols_ = np.nonzero(S >= thr)
+        for r, j in zip(rows_.tolist(), cols_.tolist()):
             i = a + r
-            js = np.nonzero(S[r, :i] >= thr)[0]
-            for j in js:
-                yield i, int(j)
+            if j < i:
+                yield i, j
 
 
 def run(window_hours: int = WINDOW_H) -> int:
@@ -64,6 +64,9 @@ def run(window_hours: int = WINDOW_H) -> int:
                    "WHERE published_at>=? ORDER BY published_at", (since,))
     if len(arts) < 2:
         return 0
+    sig = [len(arts), arts[-1]["id"]]
+    if db.get_state("cluster_sig") == sig:
+        return 0  # nothing new since the last run: skip the expensive pass
     docs = [f"{a['title']} {a['title']} {(a['summary'] or '')[:300]}" for a in arts]
     X, thr, mode = vectorise(docs)
     if mode == "tfidf":
@@ -96,6 +99,7 @@ def run(window_hours: int = WINDOW_H) -> int:
                     con.execute("UPDATE articles SET cluster_id=? WHERE id=?", (cid, arts[i]["id"]))
                     changed += 1
     refresh_stats()
+    db.set_state("cluster_sig", sig)
     log.info("cluster[%s]: %d articles, %d re-assigned", mode, len(arts), changed)
     return changed
 

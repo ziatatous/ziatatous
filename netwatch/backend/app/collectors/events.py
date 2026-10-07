@@ -9,7 +9,7 @@ from collections import defaultdict
 
 from .. import config, db, http
 from ..countries import COUNTRIES, lookup_name
-from .base import Collector, register
+from .base import Collector, Skip, register
 
 log = logging.getLogger("netwatch.events")
 
@@ -55,9 +55,33 @@ def parse_gdacs(data: dict) -> list[tuple]:
 
 
 def gdacs() -> int:
-    d = http.get_json("https://www.gdacs.org/gdacsapi/api/events/geteventlist/MAP", params={"alertlevel": "Green;Orange;Red"})
+    """GDACS GeoJSON event list; falls back to the public RSS (GeoRSS) if the JSON API refuses the request."""
+    try:
+        d = http.get_json("https://www.gdacs.org/gdacsapi/api/events/geteventlist/MAP?alertlevel=Green;Orange;Red")
+        items = parse_gdacs(d)
+    except Exception:  # noqa: BLE001
+        items = parse_gdacs_rss(http.get("https://www.gdacs.org/xml/rss.xml").content)
     with db.session() as con:
-        return sum(_put(con, *i) for i in parse_gdacs(d))
+        return sum(_put(con, *i) for i in items)
+
+
+def parse_gdacs_rss(content: bytes) -> list[tuple]:
+    import feedparser
+    out = []
+    for e in feedparser.parse(content).entries:
+        w = e.get("where") or {}
+        if w.get("coordinates"):
+            pt = [str(w["coordinates"][1]), str(w["coordinates"][0])]  # feedparser gives GeoJSON order (lon, lat)
+        else:
+            pt = (e.get("georss_point") or "").split()
+        if len(pt) != 2:
+            continue
+        lvl = e.get("gdacs_alertlevel") or ""
+        uid = e.get("gdacs_eventtype", "") + str(e.get("gdacs_eventid", e.get("id", "")))
+        out.append((f"gdacs:{uid}:{e.get('gdacs_episodeid', '')}", "disaster", db.now(), None, float(pt[0]), float(pt[1]),
+                    None, e.get("title", "disaster"), e.get("link"), "GDACS",
+                    {"alertlevel": lvl.capitalize(), "eventtype": e.get("gdacs_eventtype"), "country": e.get("gdacs_country")}))
+    return out
 
 
 # ---- GDELT 2.0 events (15-min export files). We aggregate by country & CAMEO root to stay light ----
@@ -138,7 +162,7 @@ def gdelt() -> int:
 def acled() -> int:
     email, k = config.key("ACLED_EMAIL"), config.key("ACLED_KEY")
     if not (email and k):
-        raise RuntimeError("ACLED_EMAIL / ACLED_KEY not set (free registration, see .env.example)")
+        raise Skip("ACLED_EMAIL / ACLED_KEY not set (free registration, see .env.example)")
     since = time.strftime("%Y-%m-%d", time.gmtime(time.time() - 14 * 86400))
     d = http.get_json("https://api.acleddata.com/acled/read", params={
         "key": k, "email": email, "event_date": f"{since}|{time.strftime('%Y-%m-%d')}", "event_date_where": "BETWEEN", "limit": 5000})
@@ -158,7 +182,7 @@ def acled() -> int:
 def reliefweb() -> int:
     app = config.key("RELIEFWEB_APPNAME")
     if not app:
-        raise RuntimeError("RELIEFWEB_APPNAME not set (free registration, see .env.example)")
+        raise Skip("RELIEFWEB_APPNAME not set (free registration, see .env.example)")
     d = http.get_json("https://api.reliefweb.int/v1/disasters", params={
         "appname": app, "limit": 50, "profile": "list", "preset": "latest"})
     n = 0

@@ -205,3 +205,52 @@ def test_scheduler_jobs_are_not_paused(monkeypatch):
 def test_fts_query_symbols_only():
     from app.api.routes import _fts_query
     assert db.rows("SELECT rowid FROM articles_fts WHERE articles_fts MATCH ?", (_fts_query("?!"),)) == []
+
+
+def test_13f_parser_handles_prefixed_namespaces():
+    x = """<?xml version="1.0"?><ns1:informationTable xmlns:ns1="http://www.sec.gov/edgar/document/thirteenf/informationtable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="a b">
+    <ns1:infoTable><ns1:nameOfIssuer>APPLE INC</ns1:nameOfIssuer><ns1:titleOfClass>COM</ns1:titleOfClass><ns1:cusip>1</ns1:cusip><ns1:value>5</ns1:value>
+    <ns1:shrsOrPrnAmt><ns1:sshPrnamt>7</ns1:sshPrnamt></ns1:shrsOrPrnAmt></ns1:infoTable></ns1:informationTable>"""
+    h = corpos.parse_13f_infotable(x)
+    assert h and h[0]["issuer"] == "APPLE INC" and h[0]["shares"] == 7
+
+
+def test_missing_key_is_skipped_not_failed(monkeypatch):
+    from app.collectors import base
+    c = base.Collector("t_skip", "x", 10, lambda: (_ for _ in ()).throw(base.Skip("no key")))
+    r = c.run()
+    assert r["ok"] is True and r["error"].startswith("skipped")
+    assert db.one("SELECT ok FROM collector_runs WHERE collector='t_skip'")["ok"] == 1
+
+
+def test_gdacs_rss_fallback_parser():
+    rss_xml = b"""<?xml version="1.0"?><rss xmlns:gdacs="http://www.gdacs.org" xmlns:georss="http://www.georss.org/georss" version="2.0"><channel>
+    <item><title>Red alert flood</title><link>http://g/1</link><gdacs:alertlevel>Red</gdacs:alertlevel><gdacs:eventtype>FL</gdacs:eventtype><gdacs:eventid>9</gdacs:eventid><georss:point>10.5 20.5</georss:point></item></channel></rss>"""
+    items = events.parse_gdacs_rss(rss_xml)
+    assert items and items[0][4:6] == (10.5, 20.5) and items[0][10]["alertlevel"] == "Red"
+
+
+def test_cluster_update_does_not_touch_fts(monkeypatch):
+    add_article("bbc", "Quake in Chile", "GB", "en", "tsunami")
+    add_article("elpais", "Quake in Chile tsunami", "ES", "es", "tsunami")
+    before = db.rows("SELECT rowid FROM articles_fts WHERE articles_fts MATCH 'tsunami'")
+    cluster.run()
+    assert db.rows("SELECT rowid FROM articles_fts WHERE articles_fts MATCH 'tsunami'") == before  # still indexed once each
+
+
+def test_cluster_skips_when_nothing_new():
+    add_article("a", "Same story alpha beta gamma", "FR", "fr", "")
+    add_article("b", "Same story alpha beta gamma", "ES", "es", "")
+    assert cluster.run() >= 1
+    assert cluster.run() == 0
+
+
+def test_coverage_spike_is_capped():
+    alerts.seed()
+    for i in range(40):
+        db.execute("INSERT INTO articles(source_id,url,title,published_at,fetched_at,country,lang) VALUES('s',?,?,?,?,'FR','fr')", (f"u{i}", f"t{i}", db.now(), db.now()))
+        big = i < 5
+        db.execute("INSERT INTO clusters(label_article_id,first_seen,last_seen,n_articles,n_sources,n_countries,n_langs,score) VALUES(?,?,?,?,?,?,?,?)",
+                   (i + 1, db.now(), db.now(), 100 if big else 1, 100 if big else 1, 6, 3, 90 - i))
+    alerts.evaluate()
+    assert db.one("SELECT COUNT(*) n FROM alerts WHERE rule_id='coverage_spike'")["n"] == 3

@@ -31,7 +31,7 @@ END;
 CREATE TRIGGER IF NOT EXISTS art_ad AFTER DELETE ON articles BEGIN
   INSERT INTO articles_fts(articles_fts,rowid,title,summary,full_text) VALUES('delete',old.id,old.title,old.summary,old.full_text);
 END;
-CREATE TRIGGER IF NOT EXISTS art_au AFTER UPDATE ON articles BEGIN
+CREATE TRIGGER IF NOT EXISTS art_au AFTER UPDATE OF title, summary, full_text ON articles BEGIN
   INSERT INTO articles_fts(articles_fts,rowid,title,summary,full_text) VALUES('delete',old.id,old.title,old.summary,old.full_text);
   INSERT INTO articles_fts(rowid,title,summary,full_text) VALUES (new.id,new.title,new.summary,new.full_text);
 END;
@@ -126,6 +126,7 @@ def session():
 
 def init() -> None:
     with session() as con:
+        con.execute("DROP TRIGGER IF EXISTS art_au")  # migrate: old version re-indexed text on every cluster_id/read update
         con.executescript(SCHEMA)
 
 
