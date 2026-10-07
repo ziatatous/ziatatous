@@ -1,0 +1,51 @@
+# User-editable agenda. Every entry should carry its source URL. Entries below were written from memory: verify before relying on them.
+# Add elections, summits, AGMs here; macro data releases are pulled automatically from FRED when FRED_API_KEY is set.
+events:
+- date: '2026-10-25'
+  kind: election
+  title: Brazil — presidential runoff (if required)
+  country: BR
+  url: https://www.tse.jus.br/
+  note: (date from memory — verify at source)
+- date: '2026-10-27'
+  kind: central_bank
+  title: FOMC meeting (Oct 27–28)
+  country: US
+  url: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+  note: (date from memory — verify at source)
+- date: '2026-10-29'
+  kind: central_bank
+  title: ECB Governing Council monetary policy meeting
+  country: EU
+  url: https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html
+  note: (date from memory — verify at source)
+- date: '2026-11-03'
+  kind: election
+  title: United States — midterm elections
+  country: US
+  url: https://www.usa.gov/election-day
+  note: (date from memory — verify at source)
+- date: '2026-12-08'
+  kind: central_bank
+  title: FOMC meeting (Dec 8–9)
+  country: US
+  url: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+  note: (date from memory — verify at source)
+- date: '2026-12-14'
+  kind: summit
+  title: G20 leaders' summit (United States presidency, Dec 14–15)
+  country: US
+  url: https://www.g20.org/
+  note: (date from memory — verify at source)
+- date: '2026-12-17'
+  kind: central_bank
+  title: ECB Governing Council monetary policy meeting
+  country: EU
+  url: https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html
+  note: (date from memory — verify at source)
+- date: '2027-01-27'
+  kind: central_bank
+  title: FOMC meeting (Jan 27–28)
+  country: US
+  url: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+  note: (date from memory — verify at source)

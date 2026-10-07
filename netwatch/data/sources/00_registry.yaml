@@ -1,0 +1,2200 @@
+# Identity stubs for every source that has a feed. Rich fiches live in 10_fiches.yaml (merged by id).
+- id: bbc
+  name: BBC News
+  country: GB
+  languages:
+  - en
+  - ar
+  - ru
+  - uk
+  - hi
+  - tr
+  - zh
+  - pt
+  - es
+  - fa
+  - ja
+  type: tv
+  homepage: https://www.bbc.com/news
+  ownership:
+    type: unknown
+- id: guardian
+  name: The Guardian
+  country: GB
+  languages:
+  - en
+  type: press
+  homepage: https://www.theguardian.com
+  ownership:
+    type: unknown
+- id: economist
+  name: The Economist
+  country: GB
+  languages:
+  - en
+  type: press
+  homepage: https://www.economist.com
+  ownership:
+    type: unknown
+- id: ft
+  name: Financial Times
+  country: GB
+  languages:
+  - en
+  type: press
+  homepage: https://www.ft.com
+  ownership:
+    type: unknown
+- id: telegraph
+  name: The Daily Telegraph
+  country: GB
+  languages:
+  - en
+  type: press
+  homepage: https://www.telegraph.co.uk
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: unherd
+  name: UnHerd
+  country: GB
+  languages:
+  - en
+  type: online
+  homepage: https://unherd.com
+  ownership:
+    type: unknown
+- id: spiked
+  name: spiked
+  country: GB
+  languages:
+  - en
+  type: online
+  homepage: https://www.spiked-online.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: chathamhouse
+  name: Chatham House
+  country: GB
+  languages:
+  - en
+  type: thinktank
+  homepage: https://www.chathamhouse.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: nyt
+  name: The New York Times
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://www.nytimes.com
+  ownership:
+    type: unknown
+- id: wapo
+  name: The Washington Post
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://www.washingtonpost.com
+  ownership:
+    type: unknown
+- id: wsj
+  name: The Wall Street Journal
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://www.wsj.com
+  ownership:
+    type: unknown
+- id: foxnews
+  name: Fox News
+  country: US
+  languages:
+  - en
+  type: tv
+  homepage: https://www.foxnews.com
+  ownership:
+    type: unknown
+- id: cnn
+  name: CNN
+  country: US
+  languages:
+  - en
+  type: tv
+  homepage: https://edition.cnn.com
+  ownership:
+    type: unknown
+- id: npr
+  name: NPR
+  country: US
+  languages:
+  - en
+  type: tv
+  homepage: https://www.npr.org
+  ownership:
+    type: unknown
+- id: pbs
+  name: PBS NewsHour
+  country: US
+  languages:
+  - en
+  type: tv
+  homepage: https://www.pbs.org/newshour
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: bloomberg
+  name: Bloomberg
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://www.bloomberg.com
+  ownership:
+    type: unknown
+- id: cnbc
+  name: CNBC
+  country: US
+  languages:
+  - en
+  type: tv
+  homepage: https://www.cnbc.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: propublica
+  name: ProPublica
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://www.propublica.org
+  ownership:
+    type: unknown
+- id: intercept
+  name: The Intercept
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://theintercept.com
+  ownership:
+    type: unknown
+- id: democracynow
+  name: Democracy Now!
+  country: US
+  languages:
+  - en
+  type: tv
+  homepage: https://www.democracynow.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: commondreams
+  name: Common Dreams
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://www.commondreams.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: consortiumnews
+  name: Consortium News
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://consortiumnews.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: responsiblestatecraft
+  name: Responsible Statecraft
+  country: US
+  languages:
+  - en
+  type: thinktank
+  homepage: https://responsiblestatecraft.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: foreignpolicy
+  name: Foreign Policy
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://foreignpolicy.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: foreignaffairs
+  name: Foreign Affairs
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://www.foreignaffairs.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: warontherocks
+  name: War on the Rocks
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://warontherocks.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: defenseone
+  name: Defense One
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://www.defenseone.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: brookings
+  name: Brookings Institution
+  country: US
+  languages:
+  - en
+  type: thinktank
+  homepage: https://www.brookings.edu
+  ownership:
+    type: unknown
+- id: heritage
+  name: Heritage Foundation
+  country: US
+  languages:
+  - en
+  type: thinktank
+  homepage: https://www.heritage.org
+  ownership:
+    type: unknown
+- id: cato
+  name: Cato Institute
+  country: US
+  languages:
+  - en
+  type: thinktank
+  homepage: https://www.cato.org
+  ownership:
+    type: unknown
+- id: aei
+  name: American Enterprise Institute
+  country: US
+  languages:
+  - en
+  type: thinktank
+  homepage: https://www.aei.org
+  ownership:
+    type: unknown
+- id: carnegie
+  name: Carnegie Endowment
+  country: US
+  languages:
+  - en
+  type: thinktank
+  homepage: https://carnegieendowment.org
+  ownership:
+    type: unknown
+- id: quincy
+  name: Quincy Institute
+  country: US
+  languages:
+  - en
+  type: thinktank
+  homepage: https://quincyinst.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: jacobin
+  name: Jacobin
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://jacobin.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: wired
+  name: WIRED
+  country: US
+  languages:
+  - en
+  type: press
+  homepage: https://www.wired.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: arstechnica
+  name: Ars Technica
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://arstechnica.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: 404media
+  name: 404 Media
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://www.404media.co
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: eff
+  name: Electronic Frontier Foundation
+  country: US
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.eff.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: zerohedge
+  name: ZeroHedge
+  country: US
+  languages:
+  - en
+  type: blog
+  homepage: https://www.zerohedge.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: mondoweiss
+  name: Mondoweiss
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://mondoweiss.net
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: thegrayzone
+  name: The Grayzone
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://thegrayzone.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: aljazeera
+  name: Al Jazeera
+  country: QA
+  languages:
+  - en
+  - ar
+  type: tv
+  homepage: https://www.aljazeera.com
+  ownership:
+    type: unknown
+- id: dw
+  name: Deutsche Welle
+  country: DE
+  languages:
+  - en
+  - de
+  - es
+  - ar
+  type: tv
+  homepage: https://www.dw.com
+  ownership:
+    type: unknown
+- id: france24
+  name: France 24
+  country: FR
+  languages:
+  - en
+  - fr
+  - es
+  - ar
+  type: tv
+  homepage: https://www.france24.com
+  ownership:
+    type: unknown
+- id: rfi
+  name: RFI
+  country: FR
+  languages:
+  - fr
+  type: tv
+  homepage: https://www.rfi.fr
+  ownership:
+    type: unknown
+- id: euronews
+  name: Euronews
+  country: FR
+  languages:
+  - en
+  type: tv
+  homepage: https://www.euronews.com
+  ownership:
+    type: unknown
+- id: lemonde
+  name: Le Monde
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.lemonde.fr
+  ownership:
+    type: unknown
+- id: lefigaro
+  name: Le Figaro
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.lefigaro.fr
+  ownership:
+    type: unknown
+- id: liberation
+  name: Libération
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.liberation.fr
+  ownership:
+    type: unknown
+- id: lesechos
+  name: Les Echos
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.lesechos.fr
+  ownership:
+    type: unknown
+- id: leparisien
+  name: Le Parisien
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.leparisien.fr
+  ownership:
+    type: unknown
+- id: mediapart
+  name: Mediapart
+  country: FR
+  languages:
+  - fr
+  type: online
+  homepage: https://www.mediapart.fr
+  ownership:
+    type: unknown
+- id: humanite
+  name: L'Humanité
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.humanite.fr
+  ownership:
+    type: unknown
+- id: marianne
+  name: Marianne
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.marianne.net
+  ownership:
+    type: unknown
+- id: valeursactuelles
+  name: Valeurs actuelles
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.valeursactuelles.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: lepoint
+  name: Le Point
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.lepoint.fr
+  ownership:
+    type: unknown
+- id: lexpress
+  name: L'Express
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.lexpress.fr
+  ownership:
+    type: unknown
+- id: francetvinfo
+  name: franceinfo
+  country: FR
+  languages:
+  - fr
+  type: tv
+  homepage: https://www.francetvinfo.fr
+  ownership:
+    type: unknown
+- id: reporterre
+  name: Reporterre
+  country: FR
+  languages:
+  - fr
+  type: online
+  homepage: https://reporterre.net
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: mondediplo
+  name: Le Monde diplomatique
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.monde-diplomatique.fr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: courrierinter
+  name: Courrier international
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.courrierinternational.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: politis
+  name: Politis
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.politis.fr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: atlantico
+  name: Atlantico
+  country: FR
+  languages:
+  - fr
+  type: online
+  homepage: https://www.atlantico.fr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: causeur
+  name: Causeur
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.causeur.fr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ouestfrance
+  name: Ouest-France
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.ouest-france.fr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: lacroix
+  name: La Croix
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.la-croix.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ifri
+  name: Ifri
+  country: FR
+  languages:
+  - fr
+  type: thinktank
+  homepage: https://www.ifri.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: elpais
+  name: El País
+  country: ES
+  languages:
+  - es
+  type: press
+  homepage: https://elpais.com
+  ownership:
+    type: unknown
+- id: elmundo
+  name: El Mundo
+  country: ES
+  languages:
+  - es
+  type: press
+  homepage: https://www.elmundo.es
+  ownership:
+    type: unknown
+- id: abc_es
+  name: ABC
+  country: ES
+  languages:
+  - es
+  type: press
+  homepage: https://www.abc.es
+  ownership:
+    type: unknown
+- id: lavanguardia
+  name: La Vanguardia
+  country: ES
+  languages:
+  - es
+  type: press
+  homepage: https://www.lavanguardia.com
+  ownership:
+    type: unknown
+- id: eldiario
+  name: elDiario.es
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://www.eldiario.es
+  ownership:
+    type: unknown
+- id: publico_es
+  name: Público
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://www.publico.es
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: elconfidencial
+  name: El Confidencial
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://www.elconfidencial.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: rtve
+  name: RTVE
+  country: ES
+  languages:
+  - es
+  type: tv
+  homepage: https://www.rtve.es
+  ownership:
+    type: unknown
+- id: europapress
+  name: Europa Press
+  country: ES
+  languages:
+  - es
+  type: agency
+  homepage: https://www.europapress.es
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: infolibre
+  name: infoLibre
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://www.infolibre.es
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: elsalto
+  name: El Salto
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://www.elsaltodiario.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: okdiario
+  name: OKDIARIO
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://okdiario.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: vozpopuli
+  name: Vozpópuli
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://www.vozpopuli.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: expansion
+  name: Expansión
+  country: ES
+  languages:
+  - es
+  type: press
+  homepage: https://www.expansion.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: newtral
+  name: Newtral
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://www.newtral.es
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: maldita
+  name: Maldita.es
+  country: ES
+  languages:
+  - es
+  type: online
+  homepage: https://maldita.es
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ara
+  name: Ara
+  country: ES
+  languages:
+  - ca
+  type: press
+  homepage: https://www.ara.cat
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: elcano
+  name: Real Instituto Elcano
+  country: ES
+  languages:
+  - es
+  type: thinktank
+  homepage: https://www.realinstitutoelcano.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: spiegel
+  name: Der Spiegel
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://www.spiegel.de
+  ownership:
+    type: unknown
+- id: zeit
+  name: Die Zeit
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://www.zeit.de
+  ownership:
+    type: unknown
+- id: faz
+  name: FAZ
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://www.faz.net
+  ownership:
+    type: unknown
+- id: sz
+  name: Süddeutsche Zeitung
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://www.sueddeutsche.de
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: tagesschau
+  name: Tagesschau (ARD)
+  country: DE
+  languages:
+  - de
+  type: tv
+  homepage: https://www.tagesschau.de
+  ownership:
+    type: unknown
+- id: taz
+  name: taz
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://taz.de
+  ownership:
+    type: unknown
+- id: jungewelt
+  name: junge Welt
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://www.jungewelt.de
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: nachdenkseiten
+  name: NachDenkSeiten
+  country: DE
+  languages:
+  - de
+  type: blog
+  homepage: https://www.nachdenkseiten.de
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: welt
+  name: Die Welt
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://www.welt.de
+  ownership:
+    type: unknown
+- id: handelsblatt
+  name: Handelsblatt
+  country: DE
+  languages:
+  - de
+  type: press
+  homepage: https://www.handelsblatt.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: netzpolitik
+  name: netzpolitik.org
+  country: DE
+  languages:
+  - de
+  type: online
+  homepage: https://netzpolitik.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: correctiv
+  name: CORRECTIV
+  country: DE
+  languages:
+  - de
+  type: ngo
+  homepage: https://correctiv.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ansa
+  name: ANSA
+  country: IT
+  languages:
+  - it
+  type: agency
+  homepage: https://www.ansa.it
+  ownership:
+    type: unknown
+- id: repubblica
+  name: la Repubblica
+  country: IT
+  languages:
+  - it
+  type: press
+  homepage: https://www.repubblica.it
+  ownership:
+    type: unknown
+- id: corriere
+  name: Corriere della Sera
+  country: IT
+  languages:
+  - it
+  type: press
+  homepage: https://www.corriere.it
+  ownership:
+    type: unknown
+- id: ilfatto
+  name: Il Fatto Quotidiano
+  country: IT
+  languages:
+  - it
+  type: press
+  homepage: https://www.ilfattoquotidiano.it
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ilmanifesto
+  name: il manifesto
+  country: IT
+  languages:
+  - it
+  type: press
+  homepage: https://ilmanifesto.it
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: lastampa
+  name: La Stampa
+  country: IT
+  languages:
+  - it
+  type: press
+  homepage: https://www.lastampa.it
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: sole24ore
+  name: Il Sole 24 Ore
+  country: IT
+  languages:
+  - it
+  type: press
+  homepage: https://www.ilsole24ore.com
+  ownership:
+    type: unknown
+- id: ilgiornale
+  name: il Giornale
+  country: IT
+  languages:
+  - it
+  type: press
+  homepage: https://www.ilgiornale.it
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: publico_pt
+  name: Público (PT)
+  country: PT
+  languages:
+  - pt
+  type: press
+  homepage: https://www.publico.pt
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: rtp
+  name: RTP
+  country: PT
+  languages:
+  - pt
+  type: tv
+  homepage: https://www.rtp.pt
+  ownership:
+    type: unknown
+- id: observador
+  name: Observador
+  country: PT
+  languages:
+  - pt
+  type: online
+  homepage: https://observador.pt
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: nos
+  name: NOS Nieuws
+  country: NL
+  languages:
+  - nl
+  type: tv
+  homepage: https://nos.nl
+  ownership:
+    type: unknown
+- id: notesfrompoland
+  name: Notes from Poland
+  country: PL
+  languages:
+  - en
+  type: online
+  homepage: https://notesfrompoland.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ekathimerini
+  name: Kathimerini
+  country: GR
+  languages:
+  - en
+  type: press
+  homepage: https://www.ekathimerini.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: euractiv
+  name: Euractiv
+  country: BE
+  languages:
+  - en
+  type: online
+  homepage: https://www.euractiv.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: politico_eu
+  name: Politico Europe
+  country: BE
+  languages:
+  - en
+  type: online
+  homepage: https://www.politico.eu
+  ownership:
+    type: unknown
+- id: euobserver
+  name: EUobserver
+  country: BE
+  languages:
+  - en
+  type: online
+  homepage: https://euobserver.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ecfr
+  name: European Council on Foreign Relations
+  country: EU
+  languages:
+  - en
+  type: thinktank
+  homepage: https://ecfr.eu
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: bruegel
+  name: Bruegel
+  country: BE
+  languages:
+  - en
+  type: thinktank
+  homepage: https://www.bruegel.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ceo_lobby
+  name: Corporate Europe Observatory
+  country: BE
+  languages:
+  - en
+  type: ngo
+  homepage: https://corporateeurope.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: lobbycontrol
+  name: LobbyControl
+  country: DE
+  languages:
+  - de
+  type: ngo
+  homepage: https://www.lobbycontrol.de
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: taxjustice
+  name: Tax Justice Network
+  country: GB
+  languages:
+  - en
+  type: ngo
+  homepage: https://taxjustice.net
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: tass
+  name: TASS
+  country: RU
+  languages:
+  - en
+  type: agency
+  homepage: https://tass.com
+  ownership:
+    type: unknown
+- id: ria
+  name: RIA Novosti
+  country: RU
+  languages:
+  - ru
+  type: agency
+  homepage: https://ria.ru
+  ownership:
+    type: unknown
+- id: rt
+  name: RT
+  country: RU
+  languages:
+  - en
+  type: tv
+  homepage: https://www.rt.com
+  ownership:
+    type: unknown
+- id: kommersant
+  name: Kommersant
+  country: RU
+  languages:
+  - ru
+  type: press
+  homepage: https://www.kommersant.ru
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: meduza
+  name: Meduza
+  country: LV
+  languages:
+  - ru
+  - en
+  type: online
+  homepage: https://meduza.io
+  ownership:
+    type: unknown
+- id: novayaeu
+  name: Novaya Gazeta Europe
+  country: LV
+  languages:
+  - ru
+  type: online
+  homepage: https://novayagazeta.eu
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: moscowtimes
+  name: The Moscow Times
+  country: NL
+  languages:
+  - en
+  type: online
+  homepage: https://www.themoscowtimes.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: lenta
+  name: Lenta.ru
+  country: RU
+  languages:
+  - ru
+  type: online
+  homepage: https://lenta.ru
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ukrinform
+  name: Ukrinform
+  country: UA
+  languages:
+  - en
+  type: agency
+  homepage: https://www.ukrinform.net
+  ownership:
+    type: unknown
+- id: kyivindependent
+  name: Kyiv Independent
+  country: UA
+  languages:
+  - en
+  type: online
+  homepage: https://kyivindependent.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ukrpravda
+  name: Ukrainska Pravda
+  country: UA
+  languages:
+  - uk
+  - en
+  type: online
+  homepage: https://www.pravda.com.ua
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: xinhua
+  name: Xinhua
+  country: CN
+  languages:
+  - en
+  type: agency
+  homepage: https://english.news.cn
+  ownership:
+    type: unknown
+- id: chinadaily
+  name: China Daily
+  country: CN
+  languages:
+  - en
+  type: press
+  homepage: https://www.chinadaily.com.cn
+  ownership:
+    type: unknown
+- id: globaltimes
+  name: Global Times
+  country: CN
+  languages:
+  - en
+  type: press
+  homepage: https://www.globaltimes.cn
+  ownership:
+    type: unknown
+- id: peoplesdaily
+  name: People's Daily
+  country: CN
+  languages:
+  - zh
+  type: press
+  homepage: http://www.people.com.cn
+  ownership:
+    type: unknown
+- id: scmp
+  name: South China Morning Post
+  country: HK
+  languages:
+  - en
+  type: press
+  homepage: https://www.scmp.com
+  ownership:
+    type: unknown
+- id: zaobao
+  name: Lianhe Zaobao
+  country: SG
+  languages:
+  - zh
+  type: press
+  homepage: https://www.zaobao.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: rthk
+  name: RTHK
+  country: HK
+  languages:
+  - zh
+  type: tv
+  homepage: https://news.rthk.hk
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: taipeitimes
+  name: Taipei Times
+  country: TW
+  languages:
+  - en
+  type: press
+  homepage: https://www.taipeitimes.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: asiatimes
+  name: Asia Times
+  country: HK
+  languages:
+  - en
+  type: online
+  homepage: https://asiatimes.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: thediplomat
+  name: The Diplomat
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://thediplomat.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: nhk
+  name: NHK
+  country: JP
+  languages:
+  - ja
+  type: tv
+  homepage: https://www3.nhk.or.jp
+  ownership:
+    type: unknown
+- id: japantimes
+  name: The Japan Times
+  country: JP
+  languages:
+  - en
+  type: press
+  homepage: https://www.japantimes.co.jp
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: asahi
+  name: Asahi Shimbun
+  country: JP
+  languages:
+  - ja
+  type: press
+  homepage: https://www.asahi.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: mainichi
+  name: Mainichi
+  country: JP
+  languages:
+  - ja
+  type: press
+  homepage: https://mainichi.jp
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: kyodo
+  name: Kyodo News
+  country: JP
+  languages:
+  - en
+  type: agency
+  homepage: https://english.kyodonews.net
+  ownership:
+    type: unknown
+- id: nikkeiasia
+  name: Nikkei Asia
+  country: JP
+  languages:
+  - en
+  type: press
+  homepage: https://asia.nikkei.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: yonhap
+  name: Yonhap
+  country: KR
+  languages:
+  - en
+  type: agency
+  homepage: https://en.yna.co.kr
+  ownership:
+    type: unknown
+- id: koreaherald
+  name: The Korea Herald
+  country: KR
+  languages:
+  - en
+  type: press
+  homepage: https://www.koreaherald.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: hankyoreh
+  name: Hankyoreh
+  country: KR
+  languages:
+  - ko
+  type: press
+  homepage: https://www.hani.co.kr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: straitstimes
+  name: The Straits Times
+  country: SG
+  languages:
+  - en
+  type: press
+  homepage: https://www.straitstimes.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: thehindu
+  name: The Hindu
+  country: IN
+  languages:
+  - en
+  type: press
+  homepage: https://www.thehindu.com
+  ownership:
+    type: unknown
+- id: timesofindia
+  name: The Times of India
+  country: IN
+  languages:
+  - en
+  type: press
+  homepage: https://timesofindia.indiatimes.com
+  ownership:
+    type: unknown
+- id: hindustantimes
+  name: Hindustan Times
+  country: IN
+  languages:
+  - en
+  type: press
+  homepage: https://www.hindustantimes.com
+  ownership:
+    type: unknown
+- id: ndtv
+  name: NDTV
+  country: IN
+  languages:
+  - en
+  type: tv
+  homepage: https://www.ndtv.com
+  ownership:
+    type: unknown
+- id: indianexpress
+  name: The Indian Express
+  country: IN
+  languages:
+  - en
+  type: press
+  homepage: https://indianexpress.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: scroll
+  name: Scroll.in
+  country: IN
+  languages:
+  - en
+  type: online
+  homepage: https://scroll.in
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: thewire
+  name: The Wire
+  country: IN
+  languages:
+  - en
+  type: online
+  homepage: https://thewire.in
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: jansatta
+  name: Jansatta
+  country: IN
+  languages:
+  - hi
+  type: press
+  homepage: https://www.jansatta.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: dawn
+  name: Dawn
+  country: PK
+  languages:
+  - en
+  type: press
+  homepage: https://www.dawn.com
+  ownership:
+    type: unknown
+- id: timesofisrael
+  name: The Times of Israel
+  country: IL
+  languages:
+  - en
+  type: online
+  homepage: https://www.timesofisrael.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: haaretz
+  name: Haaretz
+  country: IL
+  languages:
+  - en
+  type: press
+  homepage: https://www.haaretz.com
+  ownership:
+    type: unknown
+- id: jpost
+  name: The Jerusalem Post
+  country: IL
+  languages:
+  - en
+  type: press
+  homepage: https://www.jpost.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: middleeasteye
+  name: Middle East Eye
+  country: GB
+  languages:
+  - en
+  type: online
+  homepage: https://www.middleeasteye.net
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: almonitor
+  name: Al-Monitor
+  country: US
+  languages:
+  - en
+  type: online
+  homepage: https://www.al-monitor.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: thecradle
+  name: The Cradle
+  country: LB
+  languages:
+  - en
+  type: online
+  homepage: https://thecradle.co
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: arabnews
+  name: Arab News
+  country: SA
+  languages:
+  - en
+  type: press
+  homepage: https://www.arabnews.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: aawsat
+  name: Asharq Al-Awsat
+  country: SA
+  languages:
+  - en
+  type: press
+  homepage: https://english.aawsat.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: anadolu
+  name: Anadolu Agency
+  country: TR
+  languages:
+  - en
+  type: agency
+  homepage: https://www.aa.com.tr
+  ownership:
+    type: unknown
+- id: dailysabah
+  name: Daily Sabah
+  country: TR
+  languages:
+  - en
+  type: press
+  homepage: https://www.dailysabah.com
+  ownership:
+    type: unknown
+- id: hdn
+  name: Hürriyet Daily News
+  country: TR
+  languages:
+  - en
+  type: press
+  homepage: https://www.hurriyetdailynews.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: cumhuriyet
+  name: Cumhuriyet
+  country: TR
+  languages:
+  - tr
+  type: press
+  homepage: https://www.cumhuriyet.com.tr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: t24
+  name: T24
+  country: TR
+  languages:
+  - tr
+  type: online
+  homepage: https://t24.com.tr
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: bianet
+  name: Bianet
+  country: TR
+  languages:
+  - en
+  type: online
+  homepage: https://bianet.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: tehrantimes
+  name: Tehran Times
+  country: IR
+  languages:
+  - en
+  type: press
+  homepage: https://www.tehrantimes.com
+  ownership:
+    type: unknown
+- id: presstv
+  name: Press TV
+  country: IR
+  languages:
+  - en
+  type: tv
+  homepage: https://www.presstv.ir
+  ownership:
+    type: unknown
+- id: iranwire
+  name: IranWire
+  country: GB
+  languages:
+  - en
+  type: online
+  homepage: https://iranwire.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: allafrica
+  name: allAfrica
+  country: ZA
+  languages:
+  - en
+  type: agency
+  homepage: https://allafrica.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: africanews
+  name: Africanews
+  country: CG
+  languages:
+  - en
+  type: tv
+  homepage: https://www.africanews.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: dailymaverick
+  name: Daily Maverick
+  country: ZA
+  languages:
+  - en
+  type: online
+  homepage: https://www.dailymaverick.co.za
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: mailguardian
+  name: Mail & Guardian
+  country: ZA
+  languages:
+  - en
+  type: press
+  homepage: https://mg.co.za
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: punch
+  name: Punch
+  country: NG
+  languages:
+  - en
+  type: press
+  homepage: https://punchng.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: premiumtimes
+  name: Premium Times
+  country: NG
+  languages:
+  - en
+  type: online
+  homepage: https://www.premiumtimesng.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: egyptindependent
+  name: Egypt Independent
+  country: EG
+  languages:
+  - en
+  type: online
+  homepage: https://www.egyptindependent.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: jeuneafrique
+  name: Jeune Afrique
+  country: FR
+  languages:
+  - fr
+  type: press
+  homepage: https://www.jeuneafrique.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: tsa
+  name: TSA Algérie
+  country: DZ
+  languages:
+  - fr
+  type: online
+  homepage: https://www.tsa-algerie.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: hespress
+  name: Hespress
+  country: MA
+  languages:
+  - en
+  type: online
+  homepage: https://en.hespress.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: clarin
+  name: Clarín
+  country: AR
+  languages:
+  - es
+  type: press
+  homepage: https://www.clarin.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: lanacion_ar
+  name: La Nación (AR)
+  country: AR
+  languages:
+  - es
+  type: press
+  homepage: https://www.lanacion.com.ar
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: pagina12
+  name: Página/12
+  country: AR
+  languages:
+  - es
+  type: press
+  homepage: https://www.pagina12.com.ar
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: infobae
+  name: Infobae
+  country: AR
+  languages:
+  - es
+  type: online
+  homepage: https://www.infobae.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: folha
+  name: Folha de S.Paulo
+  country: BR
+  languages:
+  - pt
+  type: press
+  homepage: https://www.folha.uol.com.br
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: g1
+  name: G1
+  country: BR
+  languages:
+  - pt
+  type: online
+  homepage: https://g1.globo.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: brasildefato
+  name: Brasil de Fato
+  country: BR
+  languages:
+  - pt
+  type: online
+  homepage: https://www.brasildefato.com.br
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: eluniversal_mx
+  name: El Universal (MX)
+  country: MX
+  languages:
+  - es
+  type: press
+  homepage: https://www.eluniversal.com.mx
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: lajornada
+  name: La Jornada
+  country: MX
+  languages:
+  - es
+  type: press
+  homepage: https://www.jornada.com.mx
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: proceso
+  name: Proceso
+  country: MX
+  languages:
+  - es
+  type: press
+  homepage: https://www.proceso.com.mx
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: eltiempo
+  name: El Tiempo
+  country: CO
+  languages:
+  - es
+  type: press
+  homepage: https://www.eltiempo.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: latercera
+  name: La Tercera
+  country: CL
+  languages:
+  - es
+  type: press
+  homepage: https://www.latercera.cl
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: telesur
+  name: teleSUR
+  country: VE
+  languages:
+  - es
+  type: tv
+  homepage: https://www.telesurtv.net
+  ownership:
+    type: unknown
+- id: prensalatina
+  name: Prensa Latina
+  country: CU
+  languages:
+  - es
+  type: agency
+  homepage: https://www.prensa-latina.cu
+  ownership:
+    type: unknown
+- id: abcau
+  name: ABC News (Australia)
+  country: AU
+  languages:
+  - en
+  type: tv
+  homepage: https://www.abc.net.au/news
+  ownership:
+    type: unknown
+- id: smh
+  name: The Sydney Morning Herald
+  country: AU
+  languages:
+  - en
+  type: press
+  homepage: https://www.smh.com.au
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: nzherald
+  name: NZ Herald
+  country: NZ
+  languages:
+  - en
+  type: press
+  homepage: https://www.nzherald.co.nz
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: globeandmail
+  name: The Globe and Mail
+  country: CA
+  languages:
+  - en
+  type: press
+  homepage: https://www.theglobeandmail.com
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: cbc
+  name: CBC News
+  country: CA
+  languages:
+  - en
+  type: tv
+  homepage: https://www.cbc.ca/news
+  ownership:
+    type: unknown
+- id: bellingcat
+  name: Bellingcat
+  country: NL
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.bellingcat.com
+  ownership:
+    type: unknown
+- id: icij
+  name: ICIJ
+  country: US
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.icij.org
+  ownership:
+    type: unknown
+- id: occrp
+  name: OCCRP
+  country: NL
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.occrp.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: amnesty
+  name: Amnesty International
+  country: GB
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.amnesty.org
+  ownership:
+    type: unknown
+- id: hrw
+  name: Human Rights Watch
+  country: US
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.hrw.org
+  ownership:
+    type: unknown
+- id: cpj
+  name: Committee to Protect Journalists
+  country: US
+  languages:
+  - en
+  type: ngo
+  homepage: https://cpj.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: rsf_ngo
+  name: Reporters Without Borders
+  country: FR
+  languages:
+  - en
+  type: ngo
+  homepage: https://rsf.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: globalwitness
+  name: Global Witness
+  country: GB
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.globalwitness.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: crisisgroup
+  name: International Crisis Group
+  country: BE
+  languages:
+  - en
+  type: thinktank
+  homepage: https://www.crisisgroup.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: msf
+  name: Médecins Sans Frontières
+  country: CH
+  languages:
+  - en
+  type: ngo
+  homepage: https://www.msf.org
+  ownership:
+    type: unknown
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: un_news
+  name: UN News
+  country: US
+  languages:
+  - en
+  - fr
+  - es
+  - ar
+  - ru
+  - zh
+  type: institution
+  homepage: https://news.un.org
+  ownership:
+    type: public
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: who
+  name: World Health Organization
+  country: CH
+  languages:
+  - en
+  type: institution
+  homepage: https://www.who.int
+  ownership:
+    type: public
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ecb_press
+  name: European Central Bank
+  country: EU
+  languages:
+  - en
+  type: primary
+  homepage: https://www.ecb.europa.eu
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: fed_press
+  name: Federal Reserve
+  country: US
+  languages:
+  - en
+  type: primary
+  homepage: https://www.federalreserve.gov
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: boe_press
+  name: Bank of England
+  country: GB
+  languages:
+  - en
+  type: primary
+  homepage: https://www.bankofengland.co.uk
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: imf
+  name: International Monetary Fund
+  country: US
+  languages:
+  - en
+  type: institution
+  homepage: https://www.imf.org
+  ownership:
+    type: public
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: europarl
+  name: European Parliament
+  country: EU
+  languages:
+  - en
+  type: primary
+  homepage: https://www.europarl.europa.eu
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: state_dept
+  name: US State Department
+  country: US
+  languages:
+  - en
+  type: primary
+  homepage: https://www.state.gov
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: whitehouse
+  name: The White House
+  country: US
+  languages:
+  - en
+  type: primary
+  homepage: https://www.whitehouse.gov
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: ukgov
+  name: UK Government
+  country: GB
+  languages:
+  - en
+  type: primary
+  homepage: https://www.gov.uk
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.
+- id: kremlin
+  name: Kremlin (President of Russia)
+  country: RU
+  languages:
+  - en
+  type: primary
+  homepage: http://en.kremlin.ru
+  ownership:
+    type: state
+  notes: Identity pre-filled; ownership/financing not yet documented.

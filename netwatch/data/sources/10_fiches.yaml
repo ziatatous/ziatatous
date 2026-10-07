@@ -1,0 +1,2070 @@
+# Rich fiches. Every field carries `ref`; `checked: YYYY-MM-DD` is added only once a human/robot verifies it.
+- id: bbc
+  founded:
+    value: 1922
+    ref: https://en.wikipedia.org/wiki/BBC
+  ownership:
+    type: public
+    chain:
+    - name: British Broadcasting Corporation
+      kind: state
+      stake: public corporation under Royal Charter
+      ref: https://en.wikipedia.org/wiki/BBC
+  financing:
+  - kind: licence_fee
+    note: TV licence fee set by the UK government
+    ref: https://en.wikipedia.org/wiki/BBC
+  - kind: commercial
+    note: BBC Studios / BBC Studioworks commercial revenue
+    ref: https://en.wikipedia.org/wiki/BBC
+  state_affiliated:
+    value: false
+    note: Publicly funded public-service broadcaster with a charter guaranteeing editorial independence; the government sets the licence fee
+    ref: https://en.wikipedia.org/wiki/BBC
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: guardian
+  founded:
+    value: 1821
+    ref: https://en.wikipedia.org/wiki/The_Guardian
+  ownership:
+    type: foundation
+    chain:
+    - name: Guardian Media Group
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/The_Guardian
+    - name: Scott Trust Limited
+      kind: foundation
+      stake: 100% of GMG
+      ref: https://en.wikipedia.org/wiki/The_Guardian
+  financing:
+  - kind: subscription
+    note: reader contributions and subscriptions
+    ref: https://en.wikipedia.org/wiki/The_Guardian
+  - kind: advertising
+    note: display advertising
+    ref: https://en.wikipedia.org/wiki/The_Guardian
+  - kind: donations
+    note: reader donations
+    ref: https://en.wikipedia.org/wiki/The_Guardian
+  state_affiliated:
+    value: false
+    note: Owned by a trust, no state funding
+    ref: https://en.wikipedia.org/wiki/The_Guardian
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: lemonde
+  founded:
+    value: 1944
+    ref: https://en.wikipedia.org/wiki/Le_Monde
+  ownership:
+    type: private
+    chain:
+    - name: Groupe Le Monde
+      kind: company
+      ref: https://en.wikipedia.org/wiki/Le_Monde
+    - name: Le Monde Libre
+      kind: company
+      stake: majority shareholder
+      ref: https://en.wikipedia.org/wiki/Le_Monde
+    - name: Xavier Niel
+      kind: person
+      stake: co-owner (verify stake)
+      ref: https://en.wikipedia.org/wiki/Le_Monde
+    - name: Daniel Křetínský
+      kind: person
+      stake: co-owner (verify stake)
+      ref: https://en.wikipedia.org/wiki/Le_Monde
+  financing:
+  - kind: subscription
+    note: digital and print subscriptions
+    ref: https://en.wikipedia.org/wiki/Le_Monde
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Le_Monde
+  state_affiliated:
+    value: false
+    note: Private group; an independence fund holds a blocking stake (verify)
+    ref: https://en.wikipedia.org/wiki/Le_Monde
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: lefigaro
+  founded:
+    value: 1826
+    ref: https://en.wikipedia.org/wiki/Le_Figaro
+  ownership:
+    type: private
+    chain:
+    - name: Groupe Figaro
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/Le_Figaro
+    - name: Groupe Dassault
+      kind: company
+      stake: 100% of Groupe Figaro
+      ref: https://en.wikipedia.org/wiki/Le_Figaro
+    - name: Dassault family
+      kind: family
+      stake: controlling family (aerospace & defence group)
+      ref: https://en.wikipedia.org/wiki/Le_Figaro
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Le_Figaro
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Le_Figaro
+  state_affiliated:
+    value: false
+    note: Private; owner is a major defence contractor
+    ref: https://en.wikipedia.org/wiki/Le_Figaro
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: liberation
+  founded:
+    value: 1973
+    ref: https://en.wikipedia.org/wiki/Libération
+  ownership:
+    type: foundation
+    chain:
+    - name: Fonds de dotation pour une presse indépendante
+      kind: foundation
+      stake: owner since 2020
+      ref: https://en.wikipedia.org/wiki/Libération
+    - name: Patrick Drahi
+      kind: person
+      stake: founding donor of the fund (verify)
+      ref: https://en.wikipedia.org/wiki/Libération
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Libération
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Libération
+  state_affiliated:
+    value: false
+    note: Private; foundation-owned
+    ref: https://en.wikipedia.org/wiki/Libération
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: lesechos
+  founded:
+    value: 1908
+    ref: https://en.wikipedia.org/wiki/Les_Échos_(newspaper)
+  ownership:
+    type: private
+    chain:
+    - name: Groupe Les Echos-Le Parisien
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/Les_Échos_(newspaper)
+    - name: LVMH
+      kind: company
+      stake: 100%
+      company: lvmh
+      ref: https://en.wikipedia.org/wiki/Les_Échos_(newspaper)
+    - name: Bernard Arnault
+      kind: person
+      stake: controlling shareholder of LVMH (via family holding)
+      ref: https://en.wikipedia.org/wiki/Les_Échos_(newspaper)
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Les_Échos_(newspaper)
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Les_Échos_(newspaper)
+  state_affiliated:
+    value: false
+    note: Private; owner is the luxury-goods group LVMH
+    ref: https://en.wikipedia.org/wiki/Les_Échos_(newspaper)
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: leparisien
+  founded:
+    value: 1944
+    ref: https://en.wikipedia.org/wiki/Le_Parisien
+  ownership:
+    type: private
+    chain:
+    - name: Groupe Les Echos-Le Parisien
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/Le_Parisien
+    - name: LVMH
+      kind: company
+      stake: 100%
+      company: lvmh
+      ref: https://en.wikipedia.org/wiki/Le_Parisien
+    - name: Bernard Arnault
+      kind: person
+      stake: controlling shareholder of LVMH
+      ref: https://en.wikipedia.org/wiki/Le_Parisien
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Le_Parisien
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Le_Parisien
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Le_Parisien
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: mediapart
+  founded:
+    value: 2008
+    ref: https://en.wikipedia.org/wiki/Mediapart
+  ownership:
+    type: foundation
+    chain:
+    - name: Société pour la protection de l'indépendance de Mediapart
+      kind: foundation
+      stake: controlling
+      ref: https://en.wikipedia.org/wiki/Mediapart
+  financing:
+  - kind: subscription
+    note: subscriptions only; no advertising, no public subsidy by policy
+    ref: https://en.wikipedia.org/wiki/Mediapart
+  state_affiliated:
+    value: false
+    note: Independent, subscriber-funded
+    ref: https://en.wikipedia.org/wiki/Mediapart
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: humanite
+  founded:
+    value: 1904
+    ref: https://en.wikipedia.org/wiki/L'Humanité
+  ownership:
+    type: cooperative
+    chain:
+    - name: Société nouvelle du journal L'Humanité
+      kind: company
+      stake: publisher; shareholders include supporters' associations and the French Communist Party (verify)
+      ref: https://en.wikipedia.org/wiki/L'Humanité
+  financing:
+  - kind: subscription
+    note: subscriptions and fundraising
+    ref: https://en.wikipedia.org/wiki/L'Humanité
+  - kind: donations
+    note: annual Fête de l'Humanité
+    ref: https://en.wikipedia.org/wiki/L'Humanité
+  state_affiliated:
+    value: false
+    note: Historically linked to the French Communist Party
+    ref: https://en.wikipedia.org/wiki/L'Humanité
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: marianne
+  founded:
+    value: 1997
+    ref: https://en.wikipedia.org/wiki/Marianne_(magazine)
+  ownership:
+    type: private
+    chain:
+    - name: Daniel Křetínský
+      kind: person
+      stake: owner since 2018 (verify)
+      ref: https://en.wikipedia.org/wiki/Marianne_(magazine)
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Marianne_(magazine)
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Marianne_(magazine)
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Marianne_(magazine)
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: lepoint
+  founded:
+    value: 1972
+    ref: https://en.wikipedia.org/wiki/Le_Point
+  ownership:
+    type: private
+    chain:
+    - name: Groupe Artémis
+      kind: company
+      stake: owner
+      ref: https://en.wikipedia.org/wiki/Le_Point
+    - name: Pinault family
+      kind: family
+      stake: controlling family (François Pinault)
+      ref: https://en.wikipedia.org/wiki/Le_Point
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Le_Point
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Le_Point
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Le_Point
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: lexpress
+  founded:
+    value: 1953
+    ref: https://en.wikipedia.org/wiki/L'Express
+  ownership:
+    type: private
+    chain:
+    - name: Czech Media Invest
+      kind: company
+      stake: owner (verify)
+      ref: https://en.wikipedia.org/wiki/L'Express
+    - name: Daniel Křetínský
+      kind: person
+      stake: controlling shareholder
+      ref: https://en.wikipedia.org/wiki/L'Express
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/L'Express
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/L'Express
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/L'Express
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: francetvinfo
+  founded:
+    value: 2016
+    ref: https://en.wikipedia.org/wiki/Franceinfo
+  ownership:
+    type: public
+    chain:
+    - name: France Télévisions
+      kind: state
+      stake: public company
+      ref: https://en.wikipedia.org/wiki/Franceinfo
+    - name: French State
+      kind: state
+      stake: 100% of France Télévisions (via public audiovisual holding)
+      ref: https://en.wikipedia.org/wiki/Franceinfo
+  financing:
+  - kind: state
+    note: public funding from the state budget (audiovisual public funding) plus advertising
+    ref: https://en.wikipedia.org/wiki/Franceinfo
+  state_affiliated:
+    value: true
+    note: Public-service broadcaster 100% owned by the French State; editorial independence is regulated by Arcom
+    ref: https://en.wikipedia.org/wiki/Franceinfo
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: france24
+  founded:
+    value: 2006
+    ref: https://en.wikipedia.org/wiki/France_24
+  ownership:
+    type: state
+    chain:
+    - name: France Médias Monde
+      kind: state
+      stake: public company
+      ref: https://en.wikipedia.org/wiki/France_24
+    - name: French State
+      kind: state
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/France_24
+  financing:
+  - kind: state
+    note: public funding from the state budget
+    ref: https://en.wikipedia.org/wiki/France_24
+  state_affiliated:
+    value: true
+    note: Owned and financed by the French State
+    ref: https://en.wikipedia.org/wiki/France_24
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: rfi
+  founded:
+    value: 1975
+    ref: https://en.wikipedia.org/wiki/Radio_France_Internationale
+  ownership:
+    type: state
+    chain:
+    - name: France Médias Monde
+      kind: state
+      stake: public company
+      ref: https://en.wikipedia.org/wiki/Radio_France_Internationale
+    - name: French State
+      kind: state
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/Radio_France_Internationale
+  financing:
+  - kind: state
+    note: public funding from the state budget
+    ref: https://en.wikipedia.org/wiki/Radio_France_Internationale
+  state_affiliated:
+    value: true
+    note: Owned and financed by the French State
+    ref: https://en.wikipedia.org/wiki/Radio_France_Internationale
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: elpais
+  founded:
+    value: 1976
+    ref: https://en.wikipedia.org/wiki/El_País
+  ownership:
+    type: private
+    chain:
+    - name: Grupo PRISA
+      kind: company
+      stake: listed publisher
+      company: prisa
+      ref: https://en.wikipedia.org/wiki/El_País
+    - name: Amber Capital (Joseph Oughourlian)
+      kind: fund
+      stake: largest shareholder (verify stake)
+      ref: https://en.wikipedia.org/wiki/El_País
+  financing:
+  - kind: subscription
+    note: digital subscriptions
+    ref: https://en.wikipedia.org/wiki/El_País
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/El_País
+  state_affiliated:
+    value: false
+    note: Private listed group
+    ref: https://en.wikipedia.org/wiki/El_País
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: elmundo
+  founded:
+    value: 1989
+    ref: https://en.wikipedia.org/wiki/El_Mundo_(Spain)
+  ownership:
+    type: private
+    chain:
+    - name: Unidad Editorial
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/El_Mundo_(Spain)
+    - name: RCS MediaGroup
+      kind: company
+      stake: owner
+      ref: https://en.wikipedia.org/wiki/El_Mundo_(Spain)
+    - name: Urbano Cairo
+      kind: person
+      stake: controlling shareholder (via Cairo Communication)
+      ref: https://en.wikipedia.org/wiki/El_Mundo_(Spain)
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/El_Mundo_(Spain)
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/El_Mundo_(Spain)
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/El_Mundo_(Spain)
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: abc_es
+  founded:
+    value: 1903
+    ref: https://en.wikipedia.org/wiki/ABC_(newspaper)
+  ownership:
+    type: private
+    chain:
+    - name: Vocento
+      kind: company
+      stake: listed publisher
+      company: vocento
+      ref: https://en.wikipedia.org/wiki/ABC_(newspaper)
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/ABC_(newspaper)
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/ABC_(newspaper)
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/ABC_(newspaper)
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: lavanguardia
+  founded:
+    value: 1881
+    ref: https://en.wikipedia.org/wiki/La_Vanguardia
+  ownership:
+    type: private
+    chain:
+    - name: Grupo Godó
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/La_Vanguardia
+    - name: Godó family
+      kind: family
+      stake: owner (Javier Godó)
+      ref: https://en.wikipedia.org/wiki/La_Vanguardia
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/La_Vanguardia
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/La_Vanguardia
+  state_affiliated:
+    value: false
+    note: Private family-owned group
+    ref: https://en.wikipedia.org/wiki/La_Vanguardia
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: eldiario
+  founded:
+    value: 2012
+    ref: https://en.wikipedia.org/wiki/Eldiario.es
+  ownership:
+    type: independent
+    chain:
+    - name: Diario de Información de la Sociedad (journalist-partners)
+      kind: company
+      stake: owned by its journalists and founders
+      ref: https://en.wikipedia.org/wiki/Eldiario.es
+  financing:
+  - kind: subscription
+    note: members (socios) contributions
+    ref: https://en.wikipedia.org/wiki/Eldiario.es
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Eldiario.es
+  state_affiliated:
+    value: false
+    note: Independent, member-funded
+    ref: https://en.wikipedia.org/wiki/Eldiario.es
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: rtve
+  founded:
+    value: 2006
+    ref: https://en.wikipedia.org/wiki/RTVE
+  ownership:
+    type: state
+    chain:
+    - name: Corporación de Radio y Televisión Española
+      kind: state
+      stake: public corporation
+      ref: https://en.wikipedia.org/wiki/RTVE
+    - name: Spanish State
+      kind: state
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/RTVE
+  financing:
+  - kind: state
+    note: state budget transfer and levy on operators
+    ref: https://en.wikipedia.org/wiki/RTVE
+  - kind: advertising
+    note: no TV advertising since 2010
+    ref: https://en.wikipedia.org/wiki/RTVE
+  state_affiliated:
+    value: true
+    note: Public-service broadcaster owned by the Spanish State
+    ref: https://en.wikipedia.org/wiki/RTVE
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: nyt
+  founded:
+    value: 1851
+    ref: https://en.wikipedia.org/wiki/The_New_York_Times
+  ownership:
+    type: private
+    chain:
+    - name: The New York Times Company
+      kind: company
+      stake: listed company
+      ref: https://en.wikipedia.org/wiki/The_New_York_Times
+    - name: Ochs-Sulzberger family
+      kind: family
+      stake: controls via Class B shares / family trust
+      ref: https://en.wikipedia.org/wiki/The_New_York_Times
+  financing:
+  - kind: subscription
+    note: digital subscriptions (majority of revenue)
+    ref: https://en.wikipedia.org/wiki/The_New_York_Times
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/The_New_York_Times
+  state_affiliated:
+    value: false
+    note: Private listed company
+    ref: https://en.wikipedia.org/wiki/The_New_York_Times
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: wapo
+  founded:
+    value: 1877
+    ref: https://en.wikipedia.org/wiki/The_Washington_Post
+  ownership:
+    type: private
+    chain:
+    - name: Nash Holdings
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/The_Washington_Post
+    - name: Jeff Bezos
+      kind: person
+      stake: owner since 2013
+      ref: https://en.wikipedia.org/wiki/The_Washington_Post
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/The_Washington_Post
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/The_Washington_Post
+  - kind: other
+    note: owner funding of losses (reported)
+    ref: https://en.wikipedia.org/wiki/The_Washington_Post
+  state_affiliated:
+    value: false
+    note: Private, owned by an individual
+    ref: https://en.wikipedia.org/wiki/The_Washington_Post
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: wsj
+  founded:
+    value: 1889
+    ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+  ownership:
+    type: private
+    chain:
+    - name: Dow Jones & Company
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+    - name: News Corp
+      kind: company
+      stake: 100%
+      company: news-corp
+      ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+    - name: Murdoch family
+      kind: family
+      stake: controlling votes
+      ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: foxnews
+  founded:
+    value: 1996
+    ref: https://en.wikipedia.org/wiki/Fox_News
+  ownership:
+    type: private
+    chain:
+    - name: Fox Corporation
+      kind: company
+      stake: listed company
+      company: fox
+      ref: https://en.wikipedia.org/wiki/Fox_News
+    - name: Murdoch family
+      kind: family
+      stake: controlling votes
+      ref: https://en.wikipedia.org/wiki/Fox_News
+  financing:
+  - kind: other
+    note: cable carriage fees
+    ref: https://en.wikipedia.org/wiki/Fox_News
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Fox_News
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Fox_News
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: cnn
+  founded:
+    value: 1980
+    ref: https://en.wikipedia.org/wiki/CNN
+  ownership:
+    type: private
+    chain:
+    - name: Warner Bros. Discovery
+      kind: company
+      stake: listed company — corporate restructuring/sale in progress, verify current owner
+      company: wbd
+      ref: https://en.wikipedia.org/wiki/CNN
+  financing:
+  - kind: other
+    note: cable carriage fees
+    ref: https://en.wikipedia.org/wiki/CNN
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/CNN
+  - kind: subscription
+    note: streaming
+    ref: https://en.wikipedia.org/wiki/CNN
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/CNN
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: npr
+  founded:
+    value: 1970
+    ref: https://en.wikipedia.org/wiki/NPR
+  ownership:
+    type: nonprofit
+    chain:
+    - name: NPR, Inc.
+      kind: organization
+      stake: nonprofit membership organization of public radio stations
+      ref: https://en.wikipedia.org/wiki/NPR
+  financing:
+  - kind: other
+    note: member station fees
+    ref: https://en.wikipedia.org/wiki/NPR
+  - kind: advertising
+    note: corporate sponsorship
+    ref: https://en.wikipedia.org/wiki/NPR
+  - kind: donations
+    note: donations and grants
+    ref: https://en.wikipedia.org/wiki/NPR
+  state_affiliated:
+    value: false
+    note: Nonprofit; federal funding through CPB was rescinded in 2025 (verify)
+    ref: https://en.wikipedia.org/wiki/NPR
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: bloomberg
+  founded:
+    value: 1981
+    ref: https://en.wikipedia.org/wiki/Bloomberg_L.P.
+  ownership:
+    type: private
+    chain:
+    - name: Bloomberg L.P.
+      kind: company
+      stake: private company
+      ref: https://en.wikipedia.org/wiki/Bloomberg_L.P.
+    - name: Michael Bloomberg
+      kind: person
+      stake: majority owner
+      ref: https://en.wikipedia.org/wiki/Bloomberg_L.P.
+  financing:
+  - kind: subscription
+    note: Bloomberg Terminal subscriptions (financial data)
+    ref: https://en.wikipedia.org/wiki/Bloomberg_L.P.
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Bloomberg_L.P.
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: ft
+  founded:
+    value: 1888
+    ref: https://en.wikipedia.org/wiki/Financial_Times
+  ownership:
+    type: private
+    chain:
+    - name: Nikkei Inc.
+      kind: company
+      stake: owner since 2015
+      ref: https://en.wikipedia.org/wiki/Financial_Times
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Financial_Times
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Financial_Times
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Financial_Times
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: economist
+  founded:
+    value: 1843
+    ref: https://en.wikipedia.org/wiki/The_Economist
+  ownership:
+    type: private
+    chain:
+    - name: The Economist Group
+      kind: company
+      ref: https://en.wikipedia.org/wiki/The_Economist
+    - name: Exor
+      kind: company
+      stake: largest shareholder (~43%)
+      ref: https://en.wikipedia.org/wiki/The_Economist
+    - name: Agnelli family
+      kind: family
+      stake: controls Exor
+      ref: https://en.wikipedia.org/wiki/The_Economist
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/The_Economist
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/The_Economist
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/The_Economist
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: intercept
+  founded:
+    value: 2014
+    ref: https://en.wikipedia.org/wiki/The_Intercept
+  ownership:
+    type: nonprofit
+    chain:
+    - name: First Look Media
+      kind: organization
+      stake: nonprofit parent
+      ref: https://en.wikipedia.org/wiki/The_Intercept
+    - name: Pierre Omidyar
+      kind: person
+      stake: founding funder
+      ref: https://en.wikipedia.org/wiki/The_Intercept
+  financing:
+  - kind: donations
+    note: donations and founder funding
+    ref: https://en.wikipedia.org/wiki/The_Intercept
+  state_affiliated:
+    value: false
+    note: Independent, founder-funded
+    ref: https://en.wikipedia.org/wiki/The_Intercept
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: propublica
+  founded:
+    value: 2007
+    ref: https://en.wikipedia.org/wiki/ProPublica
+  ownership:
+    type: nonprofit
+    chain:
+    - name: ProPublica, Inc.
+      kind: organization
+      stake: nonprofit newsroom
+      ref: https://en.wikipedia.org/wiki/ProPublica
+  financing:
+  - kind: donations
+    note: foundation grants and individual donations (initially the Sandler Foundation)
+    ref: https://en.wikipedia.org/wiki/ProPublica
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/ProPublica
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: aljazeera
+  founded:
+    value: 1996
+    ref: https://en.wikipedia.org/wiki/Al_Jazeera
+  ownership:
+    type: state
+    chain:
+    - name: Al Jazeera Media Network
+      kind: company
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/Al_Jazeera
+    - name: State of Qatar
+      kind: state
+      stake: funder and owner (Emir-appointed board)
+      ref: https://en.wikipedia.org/wiki/Al_Jazeera
+  financing:
+  - kind: state
+    note: funded by the government of Qatar
+    ref: https://en.wikipedia.org/wiki/Al_Jazeera
+  state_affiliated:
+    value: true
+    note: Financed by the State of Qatar
+    ref: https://en.wikipedia.org/wiki/Al_Jazeera
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: dw
+  founded:
+    value: 1953
+    ref: https://en.wikipedia.org/wiki/Deutsche_Welle
+  ownership:
+    type: state
+    chain:
+    - name: Deutsche Welle (public-law broadcaster)
+      kind: state
+      stake: federal institution
+      ref: https://en.wikipedia.org/wiki/Deutsche_Welle
+    - name: German Federal Government
+      kind: state
+      stake: funds via the federal budget
+      ref: https://en.wikipedia.org/wiki/Deutsche_Welle
+  financing:
+  - kind: state
+    note: federal budget (Bundeshaushalt)
+    ref: https://en.wikipedia.org/wiki/Deutsche_Welle
+  state_affiliated:
+    value: true
+    note: Publicly funded by the German federal government; editorial independence by law
+    ref: https://en.wikipedia.org/wiki/Deutsche_Welle
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: tagesschau
+  founded:
+    value: 1952
+    ref: https://en.wikipedia.org/wiki/Tagesschau_(German_TV_news)
+  ownership:
+    type: public
+    chain:
+    - name: ARD (ARD-aktuell / NDR)
+      kind: state
+      stake: public broadcaster consortium
+      ref: https://en.wikipedia.org/wiki/Tagesschau_(German_TV_news)
+  financing:
+  - kind: licence_fee
+    note: broadcasting contribution (Rundfunkbeitrag)
+    ref: https://en.wikipedia.org/wiki/Tagesschau_(German_TV_news)
+  state_affiliated:
+    value: false
+    note: Public-service broadcaster funded by a household levy, state-independent by constitution
+    ref: https://en.wikipedia.org/wiki/Tagesschau_(German_TV_news)
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: spiegel
+  founded:
+    value: 1947
+    ref: https://en.wikipedia.org/wiki/Der_Spiegel
+  ownership:
+    type: cooperative
+    chain:
+    - name: Spiegel-Verlag
+      kind: company
+      ref: https://en.wikipedia.org/wiki/Der_Spiegel
+    - name: Mitarbeiter KG Spiegel
+      kind: cooperative
+      stake: ~50.5% owned by employees
+      ref: https://en.wikipedia.org/wiki/Der_Spiegel
+    - name: Rudolf Augstein heirs
+      kind: family
+      stake: ~24%
+      ref: https://en.wikipedia.org/wiki/Der_Spiegel
+    - name: Gruner + Jahr / Bertelsmann
+      kind: company
+      stake: ~25.5% (verify)
+      ref: https://en.wikipedia.org/wiki/Der_Spiegel
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Der_Spiegel
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Der_Spiegel
+  state_affiliated:
+    value: false
+    note: Private, employee-controlled
+    ref: https://en.wikipedia.org/wiki/Der_Spiegel
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: zeit
+  founded:
+    value: 1946
+    ref: https://en.wikipedia.org/wiki/Die_Zeit
+  ownership:
+    type: private
+    chain:
+    - name: Zeitverlag Gerd Bucerius
+      kind: company
+      ref: https://en.wikipedia.org/wiki/Die_Zeit
+    - name: Holtzbrinck Publishing Group
+      kind: company
+      stake: owner
+      ref: https://en.wikipedia.org/wiki/Die_Zeit
+    - name: von Holtzbrinck family
+      kind: family
+      stake: owner
+      ref: https://en.wikipedia.org/wiki/Die_Zeit
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Die_Zeit
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Die_Zeit
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Die_Zeit
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: faz
+  founded:
+    value: 1949
+    ref: https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung
+  ownership:
+    type: foundation
+    chain:
+    - name: Frankfurter Allgemeine Zeitung GmbH
+      kind: company
+      ref: https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung
+    - name: FAZIT-Stiftung
+      kind: foundation
+      stake: 100% owner
+      ref: https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung
+  state_affiliated:
+    value: false
+    note: Foundation-owned
+    ref: https://en.wikipedia.org/wiki/Frankfurter_Allgemeine_Zeitung
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: taz
+  founded:
+    value: 1979
+    ref: https://en.wikipedia.org/wiki/Die_Tageszeitung
+  ownership:
+    type: cooperative
+    chain:
+    - name: taz Verlagsgenossenschaft eG
+      kind: cooperative
+      stake: reader-owned cooperative
+      ref: https://en.wikipedia.org/wiki/Die_Tageszeitung
+  financing:
+  - kind: subscription
+    note: voluntary 'politically correct' pricing and subscriptions
+    ref: https://en.wikipedia.org/wiki/Die_Tageszeitung
+  - kind: donations
+    note: cooperative shares
+    ref: https://en.wikipedia.org/wiki/Die_Tageszeitung
+  state_affiliated:
+    value: false
+    note: Cooperative
+    ref: https://en.wikipedia.org/wiki/Die_Tageszeitung
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: welt
+  founded:
+    value: 1946
+    ref: https://en.wikipedia.org/wiki/Die_Welt
+  ownership:
+    type: private
+    chain:
+    - name: Axel Springer SE
+      kind: company
+      stake: publisher
+      ref: https://en.wikipedia.org/wiki/Die_Welt
+    - name: Friede Springer / Mathias Döpfner
+      kind: person
+      stake: main shareholders after the 2025 split (verify)
+      ref: https://en.wikipedia.org/wiki/Die_Welt
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Die_Welt
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Die_Welt
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Die_Welt
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: ansa
+  founded:
+    value: 1945
+    ref: https://en.wikipedia.org/wiki/ANSA
+  ownership:
+    type: cooperative
+    chain:
+    - name: ANSA cooperative
+      kind: cooperative
+      stake: owned by Italian newspaper publishers
+      ref: https://en.wikipedia.org/wiki/ANSA
+  financing:
+  - kind: other
+    note: agency subscriptions
+    ref: https://en.wikipedia.org/wiki/ANSA
+  - kind: public_subsidy
+    note: state convention for agency services (verify amounts)
+    ref: https://en.wikipedia.org/wiki/ANSA
+  state_affiliated:
+    value: false
+    note: Cooperative of publishers; receives state service contracts
+    ref: https://en.wikipedia.org/wiki/ANSA
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: corriere
+  founded:
+    value: 1876
+    ref: https://en.wikipedia.org/wiki/Corriere_della_Sera
+  ownership:
+    type: private
+    chain:
+    - name: RCS MediaGroup
+      kind: company
+      stake: publisher
+      ref: https://en.wikipedia.org/wiki/Corriere_della_Sera
+    - name: Urbano Cairo
+      kind: person
+      stake: controlling shareholder
+      ref: https://en.wikipedia.org/wiki/Corriere_della_Sera
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Corriere_della_Sera
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Corriere_della_Sera
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Corriere_della_Sera
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: repubblica
+  founded:
+    value: 1976
+    ref: https://en.wikipedia.org/wiki/La_Repubblica
+  ownership:
+    type: private
+    chain:
+    - name: GEDI Gruppo Editoriale
+      kind: company
+      stake: publisher — sale to a new owner announced, verify
+      ref: https://en.wikipedia.org/wiki/La_Repubblica
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/La_Repubblica
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/La_Repubblica
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/La_Repubblica
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: sole24ore
+  founded:
+    value: 1865
+    ref: https://en.wikipedia.org/wiki/Il_Sole_24_Ore
+  ownership:
+    type: private
+    chain:
+    - name: Il Sole 24 Ore S.p.A.
+      kind: company
+      stake: listed publisher
+      ref: https://en.wikipedia.org/wiki/Il_Sole_24_Ore
+    - name: Confindustria
+      kind: organization
+      stake: controlling shareholder (employers' federation)
+      ref: https://en.wikipedia.org/wiki/Il_Sole_24_Ore
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Il_Sole_24_Ore
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Il_Sole_24_Ore
+  state_affiliated:
+    value: false
+    note: Controlled by Italian industry federation
+    ref: https://en.wikipedia.org/wiki/Il_Sole_24_Ore
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: euronews
+  founded:
+    value: 1993
+    ref: https://en.wikipedia.org/wiki/Euronews
+  ownership:
+    type: private
+    chain:
+    - name: Euronews S.A.
+      kind: company
+      ref: https://en.wikipedia.org/wiki/Euronews
+    - name: Alpac Capital
+      kind: fund
+      stake: majority owner since 2022
+      ref: https://en.wikipedia.org/wiki/Euronews
+    - name: Mathias Corvinus Collegium
+      kind: foundation
+      stake: minority stake (verify)
+      ref: https://en.wikipedia.org/wiki/Euronews
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Euronews
+  - kind: other
+    note: distribution fees
+    ref: https://en.wikipedia.org/wiki/Euronews
+  state_affiliated:
+    value: false
+    note: Private; previously partly owned by public broadcasters
+    ref: https://en.wikipedia.org/wiki/Euronews
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: politico_eu
+  founded:
+    value: 2015
+    ref: https://en.wikipedia.org/wiki/Politico_Europe
+  ownership:
+    type: private
+    chain:
+    - name: Politico Europe
+      kind: company
+      stake: joint venture
+      ref: https://en.wikipedia.org/wiki/Politico_Europe
+    - name: Axel Springer SE
+      kind: company
+      stake: joint-venture partner
+      ref: https://en.wikipedia.org/wiki/Politico_Europe
+  financing:
+  - kind: subscription
+    note: Politico Pro subscriptions
+    ref: https://en.wikipedia.org/wiki/Politico_Europe
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Politico_Europe
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Politico_Europe
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: tass
+  founded:
+    value: 1904
+    ref: https://en.wikipedia.org/wiki/TASS
+  ownership:
+    type: state
+    chain:
+    - name: Russian Federation
+      kind: state
+      stake: state unitary enterprise
+      ref: https://en.wikipedia.org/wiki/TASS
+  financing:
+  - kind: state
+    note: federal budget
+    ref: https://en.wikipedia.org/wiki/TASS
+  state_affiliated:
+    value: true
+    note: Russian state news agency
+    ref: https://en.wikipedia.org/wiki/TASS
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: ria
+  founded:
+    value: 1941
+    ref: https://en.wikipedia.org/wiki/RIA_Novosti
+  ownership:
+    type: state
+    chain:
+    - name: Rossiya Segodnya
+      kind: state
+      stake: state media group created by decree in 2013
+      ref: https://en.wikipedia.org/wiki/RIA_Novosti
+    - name: Russian Federation
+      kind: state
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/RIA_Novosti
+  financing:
+  - kind: state
+    note: federal budget
+    ref: https://en.wikipedia.org/wiki/RIA_Novosti
+  state_affiliated:
+    value: true
+    note: Russian state media
+    ref: https://en.wikipedia.org/wiki/RIA_Novosti
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: rt
+  founded:
+    value: 2005
+    ref: https://en.wikipedia.org/wiki/RT_(TV_network)
+  ownership:
+    type: state
+    chain:
+    - name: ANO TV-Novosti
+      kind: organization
+      stake: autonomous non-profit
+      ref: https://en.wikipedia.org/wiki/RT_(TV_network)
+    - name: Russian Federation
+      kind: state
+      stake: funded from the federal budget
+      ref: https://en.wikipedia.org/wiki/RT_(TV_network)
+  financing:
+  - kind: state
+    note: federal budget
+    ref: https://en.wikipedia.org/wiki/RT_(TV_network)
+  state_affiliated:
+    value: true
+    note: Funded by the Russian state; sanctioned/banned in the EU since 2022
+    ref: https://en.wikipedia.org/wiki/RT_(TV_network)
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: meduza
+  founded:
+    value: 2014
+    ref: https://en.wikipedia.org/wiki/Meduza
+  ownership:
+    type: independent
+    chain:
+    - name: Meduza (Riga-based company)
+      kind: company
+      stake: independent exile newsroom
+      ref: https://en.wikipedia.org/wiki/Meduza
+  financing:
+  - kind: donations
+    note: reader donations ('Meduza Club')
+    ref: https://en.wikipedia.org/wiki/Meduza
+  - kind: advertising
+    note: limited advertising
+    ref: https://en.wikipedia.org/wiki/Meduza
+  state_affiliated:
+    value: false
+    note: Independent; designated 'undesirable organization' by Russia
+    ref: https://en.wikipedia.org/wiki/Meduza
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: xinhua
+  founded:
+    value: 1931
+    ref: https://en.wikipedia.org/wiki/Xinhua_News_Agency
+  ownership:
+    type: state
+    chain:
+    - name: People's Republic of China — State Council
+      kind: state
+      stake: ministry-level state agency
+      ref: https://en.wikipedia.org/wiki/Xinhua_News_Agency
+  financing:
+  - kind: state
+    note: state budget
+    ref: https://en.wikipedia.org/wiki/Xinhua_News_Agency
+  state_affiliated:
+    value: true
+    note: Chinese state news agency
+    ref: https://en.wikipedia.org/wiki/Xinhua_News_Agency
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: chinadaily
+  founded:
+    value: 1981
+    ref: https://en.wikipedia.org/wiki/China_Daily
+  ownership:
+    type: state
+    chain:
+    - name: Publicity Department of the Chinese Communist Party
+      kind: state
+      stake: supervising body
+      ref: https://en.wikipedia.org/wiki/China_Daily
+  financing:
+  - kind: state
+    note: state-owned; also advertising
+    ref: https://en.wikipedia.org/wiki/China_Daily
+  state_affiliated:
+    value: true
+    note: State-owned, party-supervised
+    ref: https://en.wikipedia.org/wiki/China_Daily
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: globaltimes
+  founded:
+    value: 2009
+    ref: https://en.wikipedia.org/wiki/Global_Times
+  ownership:
+    type: state
+    chain:
+    - name: People's Daily
+      kind: state
+      stake: publisher
+      ref: https://en.wikipedia.org/wiki/Global_Times
+    - name: Chinese Communist Party
+      kind: state
+      stake: owner of People's Daily
+      ref: https://en.wikipedia.org/wiki/Global_Times
+  financing:
+  - kind: state
+    note: party organ; also advertising
+    ref: https://en.wikipedia.org/wiki/Global_Times
+  state_affiliated:
+    value: true
+    note: Subsidiary of the CCP's People's Daily
+    ref: https://en.wikipedia.org/wiki/Global_Times
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: peoplesdaily
+  founded:
+    value: 1948
+    ref: https://en.wikipedia.org/wiki/People's_Daily
+  ownership:
+    type: state
+    chain:
+    - name: Central Committee of the Chinese Communist Party
+      kind: state
+      stake: official organ
+      ref: https://en.wikipedia.org/wiki/People's_Daily
+  financing:
+  - kind: state
+    note: party organ
+    ref: https://en.wikipedia.org/wiki/People's_Daily
+  state_affiliated:
+    value: true
+    note: Official newspaper of the Chinese Communist Party
+    ref: https://en.wikipedia.org/wiki/People's_Daily
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: scmp
+  founded:
+    value: 1903
+    ref: https://en.wikipedia.org/wiki/South_China_Morning_Post
+  ownership:
+    type: private
+    chain:
+    - name: Alibaba Group
+      kind: company
+      stake: owner since 2016 (verify current ownership)
+      ref: https://en.wikipedia.org/wiki/South_China_Morning_Post
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/South_China_Morning_Post
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/South_China_Morning_Post
+  state_affiliated:
+    value: false
+    note: Private; owner is a Chinese tech group
+    ref: https://en.wikipedia.org/wiki/South_China_Morning_Post
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: nhk
+  founded:
+    value: 1926
+    ref: https://en.wikipedia.org/wiki/NHK
+  ownership:
+    type: public
+    chain:
+    - name: Japan Broadcasting Corporation
+      kind: state
+      stake: public broadcaster
+      ref: https://en.wikipedia.org/wiki/NHK
+  financing:
+  - kind: licence_fee
+    note: viewer reception fees
+    ref: https://en.wikipedia.org/wiki/NHK
+  state_affiliated:
+    value: false
+    note: Public broadcaster funded by reception fees; budget approved by the Diet
+    ref: https://en.wikipedia.org/wiki/NHK
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: yonhap
+  founded:
+    value: 1980
+    ref: https://en.wikipedia.org/wiki/Yonhap_News_Agency
+  ownership:
+    type: public
+    chain:
+    - name: Yonhap News Agency
+      kind: company
+      stake: news agency, major shareholders are Korean broadcasters/publishers
+      ref: https://en.wikipedia.org/wiki/Yonhap_News_Agency
+  financing:
+  - kind: public_subsidy
+    note: state subsidy under the News Communications Promotion Act (verify)
+    ref: https://en.wikipedia.org/wiki/Yonhap_News_Agency
+  - kind: other
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Yonhap_News_Agency
+  state_affiliated:
+    value: false
+    note: Receives government subsidy; editorial independence disputed periodically
+    ref: https://en.wikipedia.org/wiki/Yonhap_News_Agency
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: kyodo
+  founded:
+    value: 1945
+    ref: https://en.wikipedia.org/wiki/Kyodo_News
+  ownership:
+    type: cooperative
+    chain:
+    - name: Kyodo News
+      kind: cooperative
+      stake: cooperative owned by Japanese newspapers and broadcaster NHK
+      ref: https://en.wikipedia.org/wiki/Kyodo_News
+  financing:
+  - kind: other
+    note: member and subscriber fees
+    ref: https://en.wikipedia.org/wiki/Kyodo_News
+  state_affiliated:
+    value: false
+    note: Cooperative
+    ref: https://en.wikipedia.org/wiki/Kyodo_News
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: thehindu
+  founded:
+    value: 1878
+    ref: https://en.wikipedia.org/wiki/The_Hindu
+  ownership:
+    type: private
+    chain:
+    - name: Kasturi & Sons Ltd
+      kind: company
+      ref: https://en.wikipedia.org/wiki/The_Hindu
+    - name: Kasturi family
+      kind: family
+      stake: owner
+      ref: https://en.wikipedia.org/wiki/The_Hindu
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/The_Hindu
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/The_Hindu
+  state_affiliated:
+    value: false
+    note: Private family-owned
+    ref: https://en.wikipedia.org/wiki/The_Hindu
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: timesofindia
+  founded:
+    value: 1838
+    ref: https://en.wikipedia.org/wiki/The_Times_of_India
+  ownership:
+    type: private
+    chain:
+    - name: Bennett, Coleman and Company
+      kind: company
+      ref: https://en.wikipedia.org/wiki/The_Times_of_India
+    - name: Sahu Jain family
+      kind: family
+      stake: owner (The Times Group)
+      ref: https://en.wikipedia.org/wiki/The_Times_of_India
+  financing:
+  - kind: advertising
+    note: advertising (core revenue)
+    ref: https://en.wikipedia.org/wiki/The_Times_of_India
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/The_Times_of_India
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: hindustantimes
+  founded:
+    value: 1924
+    ref: https://en.wikipedia.org/wiki/Hindustan_Times
+  ownership:
+    type: private
+    chain:
+    - name: HT Media Limited
+      kind: company
+      stake: listed company
+      ref: https://en.wikipedia.org/wiki/Hindustan_Times
+    - name: Bhartia / K. K. Birla family
+      kind: family
+      stake: controlling family
+      ref: https://en.wikipedia.org/wiki/Hindustan_Times
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Hindustan_Times
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Hindustan_Times
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: ndtv
+  founded:
+    value: 1988
+    ref: https://en.wikipedia.org/wiki/NDTV
+  ownership:
+    type: private
+    chain:
+    - name: NDTV
+      kind: company
+      stake: listed
+      ref: https://en.wikipedia.org/wiki/NDTV
+    - name: Adani Group (AMG Media Networks)
+      kind: company
+      stake: acquired control 2022-2023
+      ref: https://en.wikipedia.org/wiki/NDTV
+    - name: Gautam Adani
+      kind: person
+      stake: group founder
+      ref: https://en.wikipedia.org/wiki/NDTV
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/NDTV
+  state_affiliated:
+    value: false
+    note: Private; owner holds large infrastructure/energy interests
+    ref: https://en.wikipedia.org/wiki/NDTV
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: dawn
+  founded:
+    value: 1941
+    ref: https://en.wikipedia.org/wiki/Dawn_(newspaper)
+  ownership:
+    type: private
+    chain:
+    - name: Pakistan Herald Publications / Dawn Media Group
+      kind: company
+      ref: https://en.wikipedia.org/wiki/Dawn_(newspaper)
+    - name: Haroon family
+      kind: family
+      stake: owner
+      ref: https://en.wikipedia.org/wiki/Dawn_(newspaper)
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Dawn_(newspaper)
+  state_affiliated:
+    value: false
+    note: Private family-owned
+    ref: https://en.wikipedia.org/wiki/Dawn_(newspaper)
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: haaretz
+  founded:
+    value: 1918
+    ref: https://en.wikipedia.org/wiki/Haaretz
+  ownership:
+    type: private
+    chain:
+    - name: Haaretz Group
+      kind: company
+      ref: https://en.wikipedia.org/wiki/Haaretz
+    - name: Schocken family (Amos Schocken)
+      kind: family
+      stake: majority
+      ref: https://en.wikipedia.org/wiki/Haaretz
+    - name: Leonid Nevzin
+      kind: person
+      stake: minority stake (verify)
+      ref: https://en.wikipedia.org/wiki/Haaretz
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/Haaretz
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Haaretz
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/Haaretz
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: anadolu
+  founded:
+    value: 1920
+    ref: https://en.wikipedia.org/wiki/Anadolu_Agency
+  ownership:
+    type: state
+    chain:
+    - name: Republic of Türkiye
+      kind: state
+      stake: state-owned agency
+      ref: https://en.wikipedia.org/wiki/Anadolu_Agency
+  financing:
+  - kind: state
+    note: state-owned; revenue from state and subscribers
+    ref: https://en.wikipedia.org/wiki/Anadolu_Agency
+  state_affiliated:
+    value: true
+    note: Turkish state news agency
+    ref: https://en.wikipedia.org/wiki/Anadolu_Agency
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: dailysabah
+  founded:
+    value: 2014
+    ref: https://en.wikipedia.org/wiki/Daily_Sabah
+  ownership:
+    type: private
+    chain:
+    - name: Turkuvaz Media Group
+      kind: company
+      stake: pro-government media group
+      ref: https://en.wikipedia.org/wiki/Daily_Sabah
+    - name: Kalyon Group / Zirve Holding
+      kind: company
+      stake: owner (verify)
+      ref: https://en.wikipedia.org/wiki/Daily_Sabah
+  financing:
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Daily_Sabah
+  - kind: other
+    note: state advertising (reported)
+    ref: https://en.wikipedia.org/wiki/Daily_Sabah
+  state_affiliated:
+    value: false
+    note: Private but widely described as pro-government
+    ref: https://en.wikipedia.org/wiki/Daily_Sabah
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: tehrantimes
+  founded:
+    value: 1979
+    ref: https://en.wikipedia.org/wiki/Tehran_Times
+  ownership:
+    type: state
+    chain:
+    - name: Islamic Culture and Relations Organization
+      kind: state
+      stake: Iranian state body
+      ref: https://en.wikipedia.org/wiki/Tehran_Times
+  financing:
+  - kind: state
+    note: state organisation
+    ref: https://en.wikipedia.org/wiki/Tehran_Times
+  state_affiliated:
+    value: true
+    note: Owned by an Iranian state organisation
+    ref: https://en.wikipedia.org/wiki/Tehran_Times
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: presstv
+  founded:
+    value: 2007
+    ref: https://en.wikipedia.org/wiki/Press_TV
+  ownership:
+    type: state
+    chain:
+    - name: Islamic Republic of Iran Broadcasting (IRIB)
+      kind: state
+      stake: state broadcaster
+      ref: https://en.wikipedia.org/wiki/Press_TV
+  financing:
+  - kind: state
+    note: state budget
+    ref: https://en.wikipedia.org/wiki/Press_TV
+  state_affiliated:
+    value: true
+    note: Iranian state broadcaster
+    ref: https://en.wikipedia.org/wiki/Press_TV
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: ukrinform
+  founded:
+    value: 1918
+    ref: https://en.wikipedia.org/wiki/Ukrinform
+  ownership:
+    type: state
+    chain:
+    - name: Ukraine
+      kind: state
+      stake: state news agency
+      ref: https://en.wikipedia.org/wiki/Ukrinform
+  financing:
+  - kind: state
+    note: state budget
+    ref: https://en.wikipedia.org/wiki/Ukrinform
+  state_affiliated:
+    value: true
+    note: Ukrainian state news agency
+    ref: https://en.wikipedia.org/wiki/Ukrinform
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: telesur
+  founded:
+    value: 2005
+    ref: https://en.wikipedia.org/wiki/TeleSUR
+  ownership:
+    type: state
+    chain:
+    - name: Venezuela
+      kind: state
+      stake: majority stake
+      ref: https://en.wikipedia.org/wiki/TeleSUR
+    - name: Other member states
+      kind: state
+      stake: minority stakes (verify)
+      ref: https://en.wikipedia.org/wiki/TeleSUR
+  financing:
+  - kind: state
+    note: state funding
+    ref: https://en.wikipedia.org/wiki/TeleSUR
+  state_affiliated:
+    value: true
+    note: Multi-state channel led by Venezuela
+    ref: https://en.wikipedia.org/wiki/TeleSUR
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: prensalatina
+  founded:
+    value: 1959
+    ref: https://en.wikipedia.org/wiki/Prensa_Latina
+  ownership:
+    type: state
+    chain:
+    - name: Cuba
+      kind: state
+      stake: state news agency
+      ref: https://en.wikipedia.org/wiki/Prensa_Latina
+  financing:
+  - kind: state
+    note: state budget
+    ref: https://en.wikipedia.org/wiki/Prensa_Latina
+  state_affiliated:
+    value: true
+    note: Cuban state news agency
+    ref: https://en.wikipedia.org/wiki/Prensa_Latina
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: cbc
+  founded:
+    value: 1936
+    ref: https://en.wikipedia.org/wiki/Canadian_Broadcasting_Corporation
+  ownership:
+    type: state
+    chain:
+    - name: Canadian Broadcasting Corporation
+      kind: state
+      stake: Crown corporation
+      ref: https://en.wikipedia.org/wiki/Canadian_Broadcasting_Corporation
+  financing:
+  - kind: state
+    note: parliamentary appropriation
+    ref: https://en.wikipedia.org/wiki/Canadian_Broadcasting_Corporation
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/Canadian_Broadcasting_Corporation
+  state_affiliated:
+    value: true
+    note: Crown corporation, arm's-length by statute
+    ref: https://en.wikipedia.org/wiki/Canadian_Broadcasting_Corporation
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: abcau
+  founded:
+    value: 1932
+    ref: https://en.wikipedia.org/wiki/Australian_Broadcasting_Corporation
+  ownership:
+    type: state
+    chain:
+    - name: Australian Broadcasting Corporation
+      kind: state
+      stake: statutory corporation
+      ref: https://en.wikipedia.org/wiki/Australian_Broadcasting_Corporation
+  financing:
+  - kind: state
+    note: federal government funding
+    ref: https://en.wikipedia.org/wiki/Australian_Broadcasting_Corporation
+  state_affiliated:
+    value: true
+    note: Publicly funded, independent by statute
+    ref: https://en.wikipedia.org/wiki/Australian_Broadcasting_Corporation
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: nos
+  founded:
+    value: 1969
+    ref: https://en.wikipedia.org/wiki/Nederlandse_Omroep_Stichting
+  ownership:
+    type: public
+    chain:
+    - name: NPO public broadcasting system
+      kind: state
+      stake: public foundation
+      ref: https://en.wikipedia.org/wiki/Nederlandse_Omroep_Stichting
+  financing:
+  - kind: state
+    note: state-funded public media budget
+    ref: https://en.wikipedia.org/wiki/Nederlandse_Omroep_Stichting
+  state_affiliated:
+    value: false
+    note: Public broadcaster
+    ref: https://en.wikipedia.org/wiki/Nederlandse_Omroep_Stichting
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: rtp
+  founded:
+    value: 1935
+    ref: https://en.wikipedia.org/wiki/Rádio_e_Televisão_de_Portugal
+  ownership:
+    type: state
+    chain:
+    - name: Portuguese State
+      kind: state
+      stake: 100%
+      ref: https://en.wikipedia.org/wiki/Rádio_e_Televisão_de_Portugal
+  financing:
+  - kind: state
+    note: public funding and audiovisual contribution
+    ref: https://en.wikipedia.org/wiki/Rádio_e_Televisão_de_Portugal
+  state_affiliated:
+    value: true
+    note: State-owned public broadcaster
+    ref: https://en.wikipedia.org/wiki/Rádio_e_Televisão_de_Portugal
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: unherd
+  founded:
+    value: 2017
+    ref: https://en.wikipedia.org/wiki/UnHerd
+  ownership:
+    type: private
+    chain:
+    - name: UnHerd Ltd
+      kind: company
+      stake: owned by Paul Marshall (investor) (verify)
+      ref: https://en.wikipedia.org/wiki/UnHerd
+  financing:
+  - kind: subscription
+    note: subscriptions
+    ref: https://en.wikipedia.org/wiki/UnHerd
+  - kind: advertising
+    note: advertising
+    ref: https://en.wikipedia.org/wiki/UnHerd
+  state_affiliated:
+    value: false
+    note: Private
+    ref: https://en.wikipedia.org/wiki/UnHerd
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: brookings
+  founded:
+    value: 1916
+    ref: https://en.wikipedia.org/wiki/Brookings_Institution
+  ownership:
+    type: nonprofit
+    chain:
+    - name: Brookings Institution
+      kind: organization
+      stake: nonprofit think tank
+      ref: https://en.wikipedia.org/wiki/Brookings_Institution
+  financing:
+  - kind: donations
+    note: donors include foundations, corporations and governments — see its annual report
+    ref: https://en.wikipedia.org/wiki/Brookings_Institution
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/Brookings_Institution
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: heritage
+  founded:
+    value: 1973
+    ref: https://en.wikipedia.org/wiki/The_Heritage_Foundation
+  ownership:
+    type: nonprofit
+    chain:
+    - name: The Heritage Foundation
+      kind: organization
+      stake: nonprofit think tank
+      ref: https://en.wikipedia.org/wiki/The_Heritage_Foundation
+  financing:
+  - kind: donations
+    note: individual, foundation and corporate donors
+    ref: https://en.wikipedia.org/wiki/The_Heritage_Foundation
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/The_Heritage_Foundation
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: cato
+  founded:
+    value: 1977
+    ref: https://en.wikipedia.org/wiki/Cato_Institute
+  ownership:
+    type: nonprofit
+    chain:
+    - name: Cato Institute
+      kind: organization
+      stake: nonprofit think tank
+      ref: https://en.wikipedia.org/wiki/Cato_Institute
+  financing:
+  - kind: donations
+    note: individual, foundation and corporate donors
+    ref: https://en.wikipedia.org/wiki/Cato_Institute
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/Cato_Institute
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: aei
+  founded:
+    value: 1938
+    ref: https://en.wikipedia.org/wiki/American_Enterprise_Institute
+  ownership:
+    type: nonprofit
+    chain:
+    - name: American Enterprise Institute
+      kind: organization
+      stake: nonprofit think tank
+      ref: https://en.wikipedia.org/wiki/American_Enterprise_Institute
+  financing:
+  - kind: donations
+    note: individual, foundation and corporate donors
+    ref: https://en.wikipedia.org/wiki/American_Enterprise_Institute
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/American_Enterprise_Institute
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: carnegie
+  founded:
+    value: 1910
+    ref: https://en.wikipedia.org/wiki/Carnegie_Endowment_for_International_Peace
+  ownership:
+    type: nonprofit
+    chain:
+    - name: Carnegie Endowment for International Peace
+      kind: organization
+      stake: nonprofit think tank
+      ref: https://en.wikipedia.org/wiki/Carnegie_Endowment_for_International_Peace
+  financing:
+  - kind: donations
+    note: foundations, governments and corporations
+    ref: https://en.wikipedia.org/wiki/Carnegie_Endowment_for_International_Peace
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/Carnegie_Endowment_for_International_Peace
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: bellingcat
+  founded:
+    value: 2014
+    ref: https://en.wikipedia.org/wiki/Bellingcat
+  ownership:
+    type: nonprofit
+    chain:
+    - name: Stichting Bellingcat
+      kind: foundation
+      stake: Dutch foundation
+      ref: https://en.wikipedia.org/wiki/Bellingcat
+  financing:
+  - kind: donations
+    note: grants and donations, workshops
+    ref: https://en.wikipedia.org/wiki/Bellingcat
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/Bellingcat
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: icij
+  founded:
+    value: 1997
+    ref: https://en.wikipedia.org/wiki/International_Consortium_of_Investigative_Journalists
+  ownership:
+    type: nonprofit
+    chain:
+    - name: International Consortium of Investigative Journalists
+      kind: organization
+      stake: independent nonprofit since 2017 (verify)
+      ref: https://en.wikipedia.org/wiki/International_Consortium_of_Investigative_Journalists
+  financing:
+  - kind: donations
+    note: foundation grants and donors
+    ref: https://en.wikipedia.org/wiki/International_Consortium_of_Investigative_Journalists
+  state_affiliated:
+    value: false
+    note: Nonprofit
+    ref: https://en.wikipedia.org/wiki/International_Consortium_of_Investigative_Journalists
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: hrw
+  founded:
+    value: 1978
+    ref: https://en.wikipedia.org/wiki/Human_Rights_Watch
+  ownership:
+    type: nonprofit
+    chain:
+    - name: Human Rights Watch
+      kind: organization
+      stake: nonprofit NGO
+      ref: https://en.wikipedia.org/wiki/Human_Rights_Watch
+  financing:
+  - kind: donations
+    note: private donors; does not accept government funding
+    ref: https://en.wikipedia.org/wiki/Human_Rights_Watch
+  state_affiliated:
+    value: false
+    note: NGO
+    ref: https://en.wikipedia.org/wiki/Human_Rights_Watch
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.
+- id: amnesty
+  founded:
+    value: 1961
+    ref: https://en.wikipedia.org/wiki/Amnesty_International
+  ownership:
+    type: nonprofit
+    chain:
+    - name: Amnesty International
+      kind: organization
+      stake: membership NGO
+      ref: https://en.wikipedia.org/wiki/Amnesty_International
+  financing:
+  - kind: donations
+    note: individual donations; does not accept government funding for human-rights work
+    ref: https://en.wikipedia.org/wiki/Amnesty_International
+  state_affiliated:
+    value: false
+    note: NGO
+    ref: https://en.wikipedia.org/wiki/Amnesty_International
+  reference_status: pre-filled from public encyclopedic knowledge; each field cites its page. Not yet re-verified (no 'checked' date) — use the Sources screen to re-verify against Wikidata and primary documents.

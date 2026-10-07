@@ -1,0 +1,3 @@
+# Optional heavy modules (installed on demand, see README)
+sentence-transformers>=3.0   # multilingual embeddings for clustering (no text generation)
+argostranslate>=1.9          # local offline translation

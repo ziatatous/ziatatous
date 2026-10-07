@@ -1,0 +1,413 @@
+# Tracked companies (add freely, also from the Corpos screen). stooq = quote symbol (Stooq), sec_ticker = SEC EDGAR ticker (US filers only).
+# Symbols were written from memory: a symbol Stooq does not know simply yields no quotes (logged on the System screen).
+# Wikidata ids are resolved automatically by name; the match is flagged `qid_auto_match` so you can correct it.
+companies:
+- id: apple
+  name: Apple
+  sector: bigtech
+  country: US
+  stooq: aapl.us
+  sec_ticker: AAPL
+- id: microsoft
+  name: Microsoft
+  sector: bigtech
+  country: US
+  stooq: msft.us
+  sec_ticker: MSFT
+- id: alphabet
+  name: Alphabet (Google)
+  sector: bigtech
+  country: US
+  stooq: googl.us
+  sec_ticker: GOOGL
+- id: amazon
+  name: Amazon
+  sector: bigtech
+  country: US
+  stooq: amzn.us
+  sec_ticker: AMZN
+- id: meta
+  name: Meta Platforms
+  sector: bigtech
+  country: US
+  stooq: meta.us
+  sec_ticker: META
+- id: nvidia
+  name: Nvidia
+  sector: bigtech
+  country: US
+  stooq: nvda.us
+  sec_ticker: NVDA
+- id: tesla
+  name: Tesla
+  sector: bigtech
+  country: US
+  stooq: tsla.us
+  sec_ticker: TSLA
+- id: oracle
+  name: Oracle
+  sector: bigtech
+  country: US
+  stooq: orcl.us
+  sec_ticker: ORCL
+- id: palantir
+  name: Palantir
+  sector: surveillance
+  country: US
+  stooq: pltr.us
+  sec_ticker: PLTR
+- id: axon
+  name: Axon Enterprise
+  sector: surveillance
+  country: US
+  stooq: axon.us
+  sec_ticker: AXON
+- id: motorola
+  name: Motorola Solutions
+  sector: surveillance
+  country: US
+  stooq: msi.us
+  sec_ticker: MSI
+- id: cellebrite
+  name: Cellebrite
+  sector: surveillance
+  country: IL
+  stooq: clbt.us
+- id: jpmorgan
+  name: JPMorgan Chase
+  sector: finance
+  country: US
+  stooq: jpm.us
+  sec_ticker: JPM
+- id: goldman
+  name: Goldman Sachs
+  sector: finance
+  country: US
+  stooq: gs.us
+  sec_ticker: GS
+- id: blackrock
+  name: BlackRock
+  sector: finance
+  country: US
+  stooq: blk.us
+  sec_ticker: BLK
+- id: berkshire
+  name: Berkshire Hathaway
+  sector: finance
+  country: US
+  stooq: brk-b.us
+  sec_ticker: BRK-B
+- id: visa
+  name: Visa
+  sector: finance
+  country: US
+  stooq: v.us
+  sec_ticker: V
+- id: mastercard
+  name: Mastercard
+  sector: finance
+  country: US
+  stooq: ma.us
+  sec_ticker: MA
+- id: bnp
+  name: BNP Paribas
+  sector: finance
+  country: FR
+  stooq: bnp.fr
+- id: santander
+  name: Banco Santander
+  sector: finance
+  country: ES
+  stooq: san.es
+- id: bbva
+  name: BBVA
+  sector: finance
+  country: ES
+  stooq: bbva.es
+- id: hsbc
+  name: HSBC
+  sector: finance
+  country: GB
+  stooq: hsba.uk
+- id: deutschebank
+  name: Deutsche Bank
+  sector: finance
+  country: DE
+  stooq: dbk.de
+- id: lockheed
+  name: Lockheed Martin
+  sector: defense
+  country: US
+  stooq: lmt.us
+  sec_ticker: LMT
+- id: rtx
+  name: RTX (Raytheon)
+  sector: defense
+  country: US
+  stooq: rtx.us
+  sec_ticker: RTX
+- id: northrop
+  name: Northrop Grumman
+  sector: defense
+  country: US
+  stooq: noc.us
+  sec_ticker: NOC
+- id: generaldynamics
+  name: General Dynamics
+  sector: defense
+  country: US
+  stooq: gd.us
+  sec_ticker: GD
+- id: boeing
+  name: Boeing
+  sector: defense
+  country: US
+  stooq: ba.us
+  sec_ticker: BA
+- id: l3harris
+  name: L3Harris
+  sector: defense
+  country: US
+  stooq: lhx.us
+  sec_ticker: LHX
+- id: bae
+  name: BAE Systems
+  sector: defense
+  country: GB
+  stooq: bap.uk
+- id: rheinmetall
+  name: Rheinmetall
+  sector: defense
+  country: DE
+  stooq: rhm.de
+- id: thales
+  name: Thales
+  sector: defense
+  country: FR
+  stooq: ho.fr
+- id: dassault-aviation
+  name: Dassault Aviation
+  sector: defense
+  country: FR
+  stooq: am.fr
+- id: airbus
+  name: Airbus
+  sector: defense
+  country: FR
+  stooq: air.fr
+- id: leonardo
+  name: Leonardo
+  sector: defense
+  country: IT
+  stooq: leo.it
+- id: indra
+  name: Indra Sistemas
+  sector: defense
+  country: ES
+  stooq: idr.es
+- id: exxon
+  name: ExxonMobil
+  sector: energy
+  country: US
+  stooq: xom.us
+  sec_ticker: XOM
+- id: chevron
+  name: Chevron
+  sector: energy
+  country: US
+  stooq: cvx.us
+  sec_ticker: CVX
+- id: shell
+  name: Shell
+  sector: energy
+  country: GB
+  stooq: shel.uk
+- id: bp
+  name: BP
+  sector: energy
+  country: GB
+  stooq: bp.uk
+- id: totalenergies
+  name: TotalEnergies
+  sector: energy
+  country: FR
+  stooq: tte.fr
+- id: repsol
+  name: Repsol
+  sector: energy
+  country: ES
+  stooq: rep.es
+- id: iberdrola
+  name: Iberdrola
+  sector: energy
+  country: ES
+  stooq: ibe.es
+- id: edf
+  name: EDF
+  sector: energy
+  country: FR
+- id: pfizer
+  name: Pfizer
+  sector: pharma
+  country: US
+  stooq: pfe.us
+  sec_ticker: PFE
+- id: jnj
+  name: Johnson & Johnson
+  sector: pharma
+  country: US
+  stooq: jnj.us
+  sec_ticker: JNJ
+- id: merck
+  name: Merck & Co.
+  sector: pharma
+  country: US
+  stooq: mrk.us
+  sec_ticker: MRK
+- id: moderna
+  name: Moderna
+  sector: pharma
+  country: US
+  stooq: mrna.us
+  sec_ticker: MRNA
+- id: sanofi
+  name: Sanofi
+  sector: pharma
+  country: FR
+  stooq: san.fr
+- id: novartis
+  name: Novartis
+  sector: pharma
+  country: CH
+  stooq: novn.ch
+- id: astrazeneca
+  name: AstraZeneca
+  sector: pharma
+  country: GB
+  stooq: azn.uk
+- id: bayer
+  name: Bayer
+  sector: pharma
+  country: DE
+  stooq: bayn.de
+- id: nestle
+  name: Nestlé
+  sector: agrofood
+  country: CH
+  stooq: nesn.ch
+- id: unilever
+  name: Unilever
+  sector: agrofood
+  country: GB
+  stooq: ulvr.uk
+- id: danone
+  name: Danone
+  sector: agrofood
+  country: FR
+  stooq: bn.fr
+- id: cocacola
+  name: Coca-Cola
+  sector: agrofood
+  country: US
+  stooq: ko.us
+  sec_ticker: KO
+- id: pepsico
+  name: PepsiCo
+  sector: agrofood
+  country: US
+  stooq: pep.us
+  sec_ticker: PEP
+- id: adm
+  name: Archer-Daniels-Midland
+  sector: agrofood
+  country: US
+  stooq: adm.us
+  sec_ticker: ADM
+- id: corteva
+  name: Corteva
+  sector: agrofood
+  country: US
+  stooq: ctva.us
+  sec_ticker: CTVA
+- id: lvmh
+  name: LVMH
+  sector: media
+  country: FR
+  stooq: mc.fr
+  owns_media:
+  - source: lesechos
+    ref: https://en.wikipedia.org/wiki/Les_%C3%89chos_(newspaper)
+  - source: leparisien
+    ref: https://en.wikipedia.org/wiki/Le_Parisien
+- id: news-corp
+  name: News Corp
+  sector: media
+  country: US
+  stooq: nwsa.us
+  sec_ticker: NWSA
+  owns_media:
+  - source: wsj
+    ref: https://en.wikipedia.org/wiki/The_Wall_Street_Journal
+- id: fox
+  name: Fox Corporation
+  sector: media
+  country: US
+  stooq: foxa.us
+  sec_ticker: FOXA
+  owns_media:
+  - source: foxnews
+    ref: https://en.wikipedia.org/wiki/Fox_News
+- id: wbd
+  name: Warner Bros. Discovery
+  sector: media
+  country: US
+  stooq: wbd.us
+  sec_ticker: WBD
+  owns_media:
+  - source: cnn
+    ref: https://en.wikipedia.org/wiki/CNN
+- id: disney
+  name: Disney
+  sector: media
+  country: US
+  stooq: dis.us
+  sec_ticker: DIS
+- id: comcast
+  name: Comcast
+  sector: media
+  country: US
+  stooq: cmcsa.us
+  sec_ticker: CMCSA
+- id: prisa
+  name: PRISA
+  sector: media
+  country: ES
+  stooq: prs.es
+  owns_media:
+  - source: elpais
+    ref: https://en.wikipedia.org/wiki/El_Pa%C3%ADs
+- id: vocento
+  name: Vocento
+  sector: media
+  country: ES
+  stooq: voc.es
+  owns_media:
+  - source: abc_es
+    ref: https://en.wikipedia.org/wiki/ABC_(newspaper)
+regulator_feeds:
+- name: SEC press releases
+  url: https://www.sec.gov/news/pressreleases.rss
+- name: FTC press releases
+  url: https://www.ftc.gov/feeds/press-release.xml
+- name: US DOJ news
+  url: https://www.justice.gov/feeds/opa/justice-news.xml
+- name: UK CMA
+  url: https://www.gov.uk/search/news-and-communications.atom?organisations%5B%5D=competition-and-markets-authority
+- name: UK FCA news
+  url: https://www.fca.org.uk/news/rss.xml
+- name: European Commission press corner
+  url: https://ec.europa.eu/commission/presscorner/api/rss?language=en
+- name: CNIL (France)
+  url: https://www.cnil.fr/fr/rss.xml
+- name: EDPB
+  url: https://www.edpb.europa.eu/feed/news_en
