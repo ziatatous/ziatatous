@@ -129,6 +129,8 @@ ART_COLS = """a.id,a.title,a.summary,a.url,a.lang,a.country,a.published_at,a.sou
 
 def _fts_query(q: str) -> str:
     toks = re.findall(r"[\w'-]+", q, re.U)
+    if not toks:
+        return '"__no_match__"'  # symbols only: valid FTS expression that matches nothing
     return " ".join(f'"{t}"*' if len(t) > 2 else f'"{t}"' for t in toks)
 
 

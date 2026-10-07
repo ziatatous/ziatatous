@@ -70,12 +70,19 @@ def run_by_name(name: str) -> dict:
     return REGISTRY[name].run()
 
 
+_pool = None
+
+
 def run_async(names: list[str] | None = None) -> None:
-    def go():
-        for n in names or list(REGISTRY):
-            try:
-                REGISTRY[n].run()
-            except Exception:  # noqa: BLE001
-                pass
-            time.sleep(0.5)
-    threading.Thread(target=go, daemon=True).start()
+    """Run collectors in the background, 4 at a time, so one slow collector (RSS) never delays the others."""
+    global _pool
+    from concurrent.futures import ThreadPoolExecutor
+    _pool = _pool or ThreadPoolExecutor(max_workers=4, thread_name_prefix="collect")
+
+    def one(n: str):
+        try:
+            REGISTRY[n].run()
+        except Exception:  # noqa: BLE001
+            pass
+    for n in names or list(REGISTRY):
+        _pool.submit(one, n)

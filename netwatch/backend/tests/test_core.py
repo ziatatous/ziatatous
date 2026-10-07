@@ -175,3 +175,33 @@ def test_sources_completeness(tmp_path):
     assert sources_loader.completeness(s) == round(5 / 7, 2)
     s["ownership"]["chain"][0].pop("ref")
     assert sources_loader.completeness(s) < round(5 / 7, 2)
+
+
+def test_cluster_scales_without_dense_matrix():
+    import random
+    random.seed(0)
+    words = [f"w{n}" for n in range(3000)]
+    for k in range(1500):  # 1500 articles, ~100 events of 15 articles each
+        topic = k % 100
+        add_article(f"s{k}", f"event{topic} alpha{topic} beta{topic} gamma{topic} delta{topic} " + " ".join(random.sample(words, 2)), "FR", "en", "", hours_ago=2)
+    cluster.run()
+    n = db.one("SELECT COUNT(DISTINCT cluster_id) n FROM articles WHERE cluster_id IS NOT NULL")["n"]
+    assert 90 <= n <= 110
+
+
+def test_scheduler_jobs_are_not_paused(monkeypatch):
+    from app import scheduler
+    from app.collectors import base
+    monkeypatch.setattr(base, "run_async", lambda names=None: None)
+    s = scheduler.start(collect=True)
+    try:
+        jobs = {j.id: j for j in s.get_jobs()}
+        assert "rss" in jobs and jobs["rss"].next_run_time is not None
+        assert jobs["maintenance"].next_run_time is not None
+    finally:
+        scheduler.stop()
+
+
+def test_fts_query_symbols_only():
+    from app.api.routes import _fts_query
+    assert db.rows("SELECT rowid FROM articles_fts WHERE articles_fts MATCH ?", (_fts_query("?!"),)) == []

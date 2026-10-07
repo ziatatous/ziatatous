@@ -1,6 +1,5 @@
 """APScheduler wiring + catch-up of missed collections at startup."""
 import logging
-import threading
 from datetime import datetime, timedelta, timezone
 
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -28,16 +27,17 @@ def start(collect: bool = True) -> BackgroundScheduler:
     _sched = BackgroundScheduler(timezone="UTC", job_defaults={"coalesce": True, "max_instances": 1, "misfire_grace_time": 3600})
     if collect:
         for i, c in enumerate(base.REGISTRY.values()):
-            _sched.add_job(c.run, "interval", minutes=c.interval_min, id=c.name,
-                           next_run_time=None)
-        _sched.add_job(maintenance.periodic, "interval", minutes=10, id="maintenance")
+            # first run is handled by the catch-up below; the interval then keeps the cadence
+            _sched.add_job(c.run, "interval", minutes=c.interval_min, id=c.name)
+        _sched.add_job(maintenance.periodic, "interval", minutes=10, id="maintenance",
+                       next_run_time=datetime.now(timezone.utc) + timedelta(seconds=90))
         _sched.add_job(maintenance.retention, "cron", hour=4, minute=15, id="retention")
     _sched.start()
     if collect:
         # catch-up: run what we missed while the PC was off, one after the other
         missed = [c.name for c in base.REGISTRY.values() if _due(c)]
         log.info("catch-up: %d collectors due: %s", len(missed), missed)
-        threading.Thread(target=lambda: (base.run_async(missed), None), daemon=True).start()
+        base.run_async(missed)
     return _sched
 
 

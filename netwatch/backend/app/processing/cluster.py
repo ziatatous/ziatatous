@@ -39,9 +39,26 @@ def vectorise(texts: list[str]):
     return _tfidf(texts), 0.28, "tfidf"
 
 
-def run(window_hours: int = WINDOW_H) -> int:
-    """Assign recent articles to clusters (greedy single pass, deterministic order)."""
+def _pairs_above(X, thr: float, block: int = 400):
+    """Yield (i, j) with j < i and cosine >= thr, without ever building a dense n x n or n x features matrix."""
     import numpy as np
+    from scipy import sparse
+    n = X.shape[0]
+    sp = sparse.issparse(X)
+    for a in range(0, n, block):
+        b = min(n, a + block)
+        S = X[a:b] @ X[:b].T  # rows a..b vs earlier+same block
+        S = S.toarray() if sp else np.asarray(S)
+        for r in range(b - a):
+            i = a + r
+            js = np.nonzero(S[r, :i] >= thr)[0]
+            for j in js:
+                yield i, int(j)
+
+
+def run(window_hours: int = WINDOW_H) -> int:
+    """Group recent articles into events. Single-link over cosine similarity (union-find), deterministic,
+    memory-bounded (sparse blocks). Existing DB cluster ids are reused when members already had one."""
     since = db.ts_ago(window_hours * 3600)
     arts = db.rows("SELECT id,title,summary,cluster_id,published_at,source_id,country,lang FROM articles "
                    "WHERE published_at>=? ORDER BY published_at", (since,))
@@ -49,39 +66,31 @@ def run(window_hours: int = WINDOW_H) -> int:
         return 0
     docs = [f"{a['title']} {a['title']} {(a['summary'] or '')[:300]}" for a in arts]
     X, thr, mode = vectorise(docs)
-    dense = X.toarray() if hasattr(X, "toarray") else np.asarray(X)
-    norms = np.linalg.norm(dense, axis=1, keepdims=True)
-    norms[norms == 0] = 1
-    dense = dense / norms
-    assign: dict[int, int] = {}  # article idx -> local cluster idx
-    cents: list[np.ndarray] = []
-    members: list[list[int]] = []
+    if mode == "tfidf":
+        pass  # TfidfVectorizer already L2-normalises rows -> dot product == cosine
+    parent = list(range(len(arts)))
+
+    def find(x):
+        while parent[x] != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+    for i, j in _pairs_above(X, thr):
+        ri, rj = find(i), find(j)
+        if ri != rj:
+            parent[max(ri, rj)] = min(ri, rj)
+    comps: dict[int, list[int]] = {}
     for i in range(len(arts)):
-        best, best_s = -1, 0.0
-        if cents:
-            sims = np.dot(np.vstack(cents), dense[i])
-            j = int(np.argmax(sims))
-            best, best_s = j, float(sims[j])
-        if best >= 0 and best_s >= thr:
-            members[best].append(i)
-            cents[best] = dense[members[best]].mean(axis=0)
-            cents[best] /= (np.linalg.norm(cents[best]) or 1)
-            assign[i] = best
-        else:
-            cents.append(dense[i].copy())
-            members.append([i])
-            assign[i] = len(cents) - 1
+        comps.setdefault(find(i), []).append(i)
     changed = 0
     with db.session() as con:
-        # reuse existing DB cluster id when members already had one (stable ids across runs)
-        for mem in members:
+        for mem in comps.values():
+            if len(mem) < 2:
+                continue  # singletons stay unclustered until a second article matches
             ids = [arts[i]["cluster_id"] for i in mem if arts[i]["cluster_id"]]
             cid = max(set(ids), key=ids.count) if ids else None
-            if len(mem) == 1 and cid is None:
-                continue  # singletons stay unclustered until a second article matches
             if cid is None:
-                cur = con.execute("INSERT INTO clusters(first_seen,last_seen) VALUES(?,?)", (db.now(), db.now()))
-                cid = cur.lastrowid
+                cid = con.execute("INSERT INTO clusters(first_seen,last_seen) VALUES(?,?)", (db.now(), db.now())).lastrowid
             for i in mem:
                 if arts[i]["cluster_id"] != cid:
                     con.execute("UPDATE articles SET cluster_id=? WHERE id=?", (cid, arts[i]["id"]))
