@@ -1,0 +1,41 @@
+# Flux RSS/Atom publics. Éditables. `enabled: false` pour désactiver.
+# category: mouvements | surveillance | scenes | general
+# orient: étiquette de lecture (généraliste, gauche, gauche radicale, libertaire, droite, extrême droite, ONG)
+# ATTENTION : URLs non testées à l'écriture (réseau bloqué) -> la page Système signale les flux morts.
+feeds:
+  # --- Généralistes (référence) ---
+  - {id: lemonde, name: Le Monde - International, url: "https://www.lemonde.fr/international/rss_full.xml", orient: généraliste, category: mouvements, lang: fr}
+  - {id: guardian, name: The Guardian - World, url: "https://www.theguardian.com/world/rss", orient: généraliste, category: mouvements, lang: en}
+  - {id: aljazeera, name: Al Jazeera, url: "https://www.aljazeera.com/xml/rss/all.xml", orient: généraliste, category: mouvements, lang: en}
+  - {id: elpais, name: El País - España, url: "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/espana/portada", orient: généraliste, category: mouvements, lang: es}
+  - {id: bbc, name: BBC World, url: "https://feeds.bbci.co.uk/news/world/rss.xml", orient: généraliste, category: mouvements, lang: en}
+  - {id: france24, name: France 24, url: "https://www.france24.com/fr/rss", orient: généraliste, category: mouvements, lang: fr}
+  - {id: rfi, name: RFI, url: "https://www.rfi.fr/fr/rss", orient: généraliste, category: mouvements, lang: fr}
+  # --- Gauche / gauche radicale / libertaire ---
+  - {id: eldiario, name: elDiario.es, url: "https://www.eldiario.es/rss/", orient: gauche, category: mouvements, lang: es}
+  - {id: publico, name: Público, url: "https://www.publico.es/rss", orient: gauche, category: mouvements, lang: es}
+  - {id: elsalto, name: El Salto, url: "https://www.elsaltodiario.com/feed", orient: gauche radicale, category: mouvements, lang: es}
+  - {id: ctxt, name: CTXT, url: "https://ctxt.es/es/?format=feed&type=rss", orient: gauche, category: mouvements, lang: es}
+  - {id: lamarea, name: La Marea, url: "https://www.lamarea.com/feed/", orient: gauche, category: mouvements, lang: es}
+  - {id: lundimatin, name: Lundi Matin, url: "https://lundi.am/spip.php?page=backend", orient: gauche radicale, category: mouvements, lang: fr}
+  - {id: reporterre, name: Reporterre, url: "https://reporterre.net/spip.php?page=backend", orient: gauche, category: mouvements, lang: fr}
+  - {id: basta, name: Basta!, url: "https://basta.media/spip.php?page=backend", orient: gauche, category: mouvements, lang: fr}
+  - {id: crimethinc, name: CrimethInc., url: "https://crimethinc.com/feed", orient: libertaire, category: mouvements, lang: en}
+  - {id: itsgoingdown, name: It's Going Down, url: "https://itsgoingdown.org/feed/", orient: libertaire, category: mouvements, lang: en}
+  - {id: jacobin, name: Jacobin, url: "https://jacobin.com/feed", orient: gauche, category: mouvements, lang: en}
+  # --- Droite / extrême droite (pluralité, étiquetés) ---
+  - {id: figaro, name: Le Figaro - À la une, url: "https://www.lefigaro.fr/rss/figaro_actualites-a-la-une.xml", orient: droite, category: mouvements, lang: fr}
+  - {id: libertaddigital, name: Libertad Digital, url: "https://www.libertaddigital.com/rss/", orient: droite, category: mouvements, lang: es}
+  - {id: breizhinfo, name: Breizh-info, url: "https://www.breizh-info.com/feed/", orient: extrême droite, category: mouvements, lang: fr}
+  # --- Libertés publiques / surveillance ---
+  - {id: quadrature, name: La Quadrature du Net, url: "https://www.laquadrature.net/feed/", orient: ONG, category: surveillance, lang: fr}
+  - {id: eff, name: EFF Deeplinks, url: "https://www.eff.org/rss/updates.xml", orient: ONG, category: surveillance, lang: en}
+  - {id: amnesty, name: Amnesty International, url: "https://www.amnesty.org/en/latest/news/feed/", orient: ONG, category: surveillance, lang: en}
+  - {id: accessnow, name: Access Now, url: "https://www.accessnow.org/feed/", orient: ONG, category: surveillance, lang: en}
+  - {id: edri, name: EDRi, url: "https://edri.org/feed/", orient: ONG, category: surveillance, lang: en}
+  - {id: statewatch, name: Statewatch, url: "https://www.statewatch.org/rss", orient: ONG, category: surveillance, lang: en}
+  - {id: hrw, name: Human Rights Watch, url: "https://www.hrw.org/rss", orient: ONG, category: surveillance, lang: en}
+  - {id: xnet, name: Xnet, url: "https://xnet-x.net/feed/", orient: ONG, category: surveillance, lang: es}
+  - {id: derechosdigitales, name: Derechos Digitales, url: "https://www.derechosdigitales.org/feed/", orient: ONG, category: surveillance, lang: es}
+  # --- Scènes / radios ---
+  - {id: radiovallekas, name: Radio Vallekas, url: "https://www.radiovallekas.org/feed/", orient: indépendant, category: scenes, lang: es}

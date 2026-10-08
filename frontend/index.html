@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASFALTO</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono&family=Rajdhani:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <a class="logo" href="#/">ASFALTO</a>
+  <nav id="nav"></nav>
+  <div class="tools">
+    <button id="k" title="Ctrl/Cmd+K">⌘K</button>
+    <button id="calm"></button>
+    <select id="lang"><option value="fr">FR</option><option value="es">ES</option><option value="en">EN</option></select>
+  </div>
+</header>
+<main id="app"></main>
+<div id="pal" hidden><input id="palin" placeholder="…"><ul id="pallist"></ul></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

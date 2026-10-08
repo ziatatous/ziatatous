@@ -1,0 +1,11 @@
+# Annuaire de canaux PUBLICS (médias, radios, salles, collectifs) à suivre par ville.
+# Ajoute les tiens. Vérifier chaque lien (non testés à l'écriture).
+annuaire:
+  - {city: madrid, type: radio, name: Radio Vallekas, url: "https://www.radiovallekas.org", scene: "autonomes / punk"}
+  - {city: madrid, type: média, name: El Salto, url: "https://www.elsaltodiario.com", scene: "mouvements"}
+  - {city: madrid, type: média, name: Diagonal, url: "https://www.diagonalperiodico.net", scene: "mouvements"}
+  - {city: madrid, type: salle, name: Sala El Sol, url: "https://www.salaelsol.com", scene: "concerts rock / punk"}
+  - {city: madrid, type: centre social, name: La Tabacalera (Lavapiés), url: "https://latabacalera.net", scene: "autogestion"}
+  - {city: paris, type: radio, name: Radio Libertaire, url: "https://radio-libertaire.fr", scene: "libertaire"}
+  - {city: paris, type: média, name: Lundi Matin, url: "https://lundi.am", scene: "gauche radicale"}
+  - {city: berlin, type: média, name: Indymedia Linksunten (archives) / taz, url: "https://taz.de", scene: "mouvements"}

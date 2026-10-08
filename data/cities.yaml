@@ -1,0 +1,6 @@
+# Villes connues (centre de carte et position par défaut des événements sans coordonnées)
+madrid: {name: Madrid, lat: 40.4168, lon: -3.7038, country: ES}
+barcelona: {name: Barcelona, lat: 41.3874, lon: 2.1686, country: ES}
+paris: {name: Paris, lat: 48.8566, lon: 2.3522, country: FR}
+berlin: {name: Berlin, lat: 52.52, lon: 13.405, country: DE}
+london: {name: London, lat: 51.5072, lon: -0.1276, country: GB}

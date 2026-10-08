@@ -1,0 +1,107 @@
+# Fiches mouvements. Résumés factuels de départ, écrits à la main (aucune IA à l'exécution) :
+# à relire/compléter avec les sources listées. intensity : 1 (faible) à 3 (forte).
+mouvements:
+  - id: gilets-jaunes
+    name: Gilets jaunes
+    countries: [FR]
+    family: populaire / anti-taxes, hétérogène
+    period: "2018 - 2019 (résidus ensuite)"
+    intensity: 3
+    origins: "Né fin 2018 en France autour d'une pétition contre la hausse de la taxe sur les carburants, organisé via les réseaux sociaux sans leaders reconnus ni syndicats."
+    ethos: "Colère sociale transversale (pouvoir d'achat, démocratie directe, référendum d'initiative citoyenne). Rejet des corps intermédiaires ; identité par le gilet de sécurité, symbole de visibilité."
+    repertoire: "Occupation de ronds-points, blocages, manifestations hebdomadaires du samedi (« actes »), cortèges parfois émeutiers à Paris et ailleurs."
+    currents: "Composantes de gauche, de droite et apolitiques coexistent ; débats sur la violence et sur la récupération."
+    state: "Mobilisation fortement réduite depuis 2019-2020 ; héritage dans le débat sur le maintien de l'ordre et le LBD."
+    refs:
+      - {t: Wikipédia - Mouvement des Gilets jaunes, u: "https://fr.wikipedia.org/wiki/Mouvement_des_Gilets_jaunes"}
+  - id: black-bloc
+    name: Black bloc
+    countries: [DE, FR, US, IT, GR, ES]
+    family: autonome / anarchiste / antiautoritaire
+    period: "années 1980 - aujourd'hui"
+    intensity: 3
+    origins: "Tactique, pas organisation : née dans les mouvements autonomes ouest-allemands (squats, anti-nucléaire) des années 1980, rendue célèbre par Seattle (1999)."
+    ethos: "Anonymat collectif (vêtements noirs, visages couverts), solidarité de cortège, attaque symbolique de cibles perçues comme capitalistes ou étatiques, refus de la hiérarchie."
+    repertoire: "Formation d'un bloc dans un cortège, dégradations ciblées, affrontements avec la police, protection mutuelle."
+    currents: "Débats permanents avec les mouvements pacifistes sur la violence et la « diversité des tactiques »."
+    state: "Présent dans de nombreuses manifestations ; fortement visé par les lois anti-masque et les fichages."
+    refs:
+      - {t: Wikipédia - Black bloc, u: "https://fr.wikipedia.org/wiki/Black_bloc"}
+  - id: autonomes
+    name: Mouvements autonomes (Autonomia, Autonomen)
+    countries: [IT, DE, NL, FR]
+    family: autonome / post-opéraïste / anarchiste
+    period: "années 1970 - aujourd'hui"
+    intensity: 2
+    origins: "Autonomia opéraïa en Italie (années 1970) ; Autonomen en RFA à partir de la fin des années 1970 (squats, anti-nucléaire, solidarité)."
+    ethos: "Autonomie vis-à-vis des partis et syndicats, action directe, squats et centres sociaux comme base matérielle et culturelle."
+    repertoire: "Squats, centres sociaux, manifestations, blocages, presse et radios militantes."
+    currents: "Très diversifiés selon pays ; liens avec les scènes punk et antifa."
+    state: "Réseaux de centres sociaux actifs dans plusieurs pays européens."
+    refs:
+      - {t: Wikipédia - Autonomen, u: "https://fr.wikipedia.org/wiki/Autonomen"}
+  - id: zad
+    name: ZAD (Zones à défendre)
+    countries: [FR]
+    family: écologiste / anticapitaliste
+    period: "2009 - aujourd'hui"
+    intensity: 2
+    origins: "« Zone d'aménagement différé » détournée en « zone à défendre » : occupation contre l'aéroport de Notre-Dame-des-Landes (abandonné en 2018), puis Sivens, Bure, etc."
+    ethos: "Vivre sur place pour bloquer un projet, expérimentations d'autonomie, agriculture collective, critique des grands projets."
+    repertoire: "Occupation durable, cabanes, blocages, manifestations, recours juridiques."
+    currents: "Cohabitation de militants écologistes, autonomes, agriculteurs locaux ; tensions internes et avec l'État."
+    state: "Notre-Dame-des-Landes en partie légalisée après 2018 ; d'autres luttes continuent."
+    refs:
+      - {t: Wikipédia - Zone à défendre, u: "https://fr.wikipedia.org/wiki/Zone_%C3%A0_d%C3%A9fendre"}
+  - id: 15m
+    name: 15-M / Indignados
+    countries: [ES]
+    family: citoyen / horizontal
+    period: "2011 - 2012"
+    intensity: 2
+    origins: "Manifestation du 15 mai 2011 puis occupation de la Puerta del Sol à Madrid, dans le contexte de la crise économique et du chômage."
+    ethos: "« No nos representan » : assemblées ouvertes, démocratie directe, refus des partis traditionnels, caractère pacifique revendiqué."
+    repertoire: "Campements, assemblées de quartier, plateformes (PAH contre les expulsions), marées thématiques."
+    currents: "Héritage direct dans Podemos, les municipalités du changement et les mouvements pour le logement."
+    state: "Le mouvement s'est dissous en assemblées locales ; son influence politique reste forte."
+    refs:
+      - {t: Wikipedia - Movimiento 15-M, u: "https://es.wikipedia.org/wiki/Movimiento_15-M"}
+  - id: estallido-chile
+    name: Estallido social chilien
+    countries: [CL]
+    family: populaire / étudiant
+    period: "2019 - 2020"
+    intensity: 3
+    origins: "Déclenché en octobre 2019 à Santiago par la hausse du ticket de métro et des inégalités accumulées."
+    ethos: "Rejet du modèle néolibéral et de la Constitution héritée de la dictature."
+    repertoire: "Manifestations de masse, barricades, cacerolazos, affrontements, « première ligne »."
+    currents: "Large coalition ; débats sur la répression (nombreuses blessures oculaires) et sur la violence."
+    state: "Processus constituant lancé puis deux projets rejetés (2022 et 2023)."
+    refs:
+      - {t: Wikipedia - Estallido social en Chile, u: "https://es.wikipedia.org/wiki/Estallido_social_en_Chile"}
+  - id: grece-2008
+    name: Soulèvement de décembre 2008 (Grèce)
+    countries: [GR]
+    family: anarchiste / jeunesse
+    period: "décembre 2008"
+    intensity: 3
+    origins: "Émeutes nationales après la mort d'Alexandros Grigoropoulos, 15 ans, tué par un policier à Athènes."
+    ethos: "Colère de la jeunesse, rôle central des milieux anarchistes d'Exarcheia."
+    repertoire: "Émeutes, occupations d'universités et de bâtiments publics."
+    currents: "Précède les mobilisations anti-austérité de 2010-2012."
+    state: "Événement historique ; Exarcheia reste un quartier de référence de la scène militante."
+    refs:
+      - {t: Wikipédia - Émeutes de décembre 2008 en Grèce, u: "https://fr.wikipedia.org/wiki/%C3%89meutes_de_d%C3%A9cembre_2008_en_Gr%C3%A8ce"}
+  - id: blm
+    name: Black Lives Matter
+    countries: [US, GB, FR]
+    family: antiraciste / droits civiques
+    period: "2013 - aujourd'hui (pic en 2020)"
+    intensity: 3
+    origins: "Hashtag né en 2013 après l'acquittement du meurtrier de Trayvon Martin ; vague mondiale après la mort de George Floyd en mai 2020."
+    ethos: "Dénonciation des violences policières et du racisme systémique."
+    repertoire: "Manifestations massives, genou à terre, actions locales ; émeutes ponctuelles."
+    currents: "Réseau décentralisé avec composantes réformistes et radicales."
+    state: "Mouvement présent mais moins massif depuis 2021 ; débats sur la police."
+    refs:
+      - {t: Wikipedia - Black Lives Matter, u: "https://en.wikipedia.org/wiki/Black_Lives_Matter"}

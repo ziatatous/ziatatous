@@ -1,0 +1,112 @@
+# Fiches scènes (sous-cultures). Résumés factuels de départ, à compléter.
+scenes:
+  - id: skinhead
+    name: Skinhead (traditionnel)
+    family: sous-culture ouvrière
+    history: "Né à la fin des années 1960 au Royaume-Uni, parmi la jeunesse ouvrière blanche et noire : goût pour le ska, le rocksteady et la culture jamaïcaine, style sobre (Fred Perry, Dr. Martens, Levi's, bretelles)."
+    values: "Fierté ouvrière, loyauté du groupe, sobriété du style. À l'origine multiculturel ; la politique d'extrême droite est venue après, via le skinhead des années 1970-80."
+    codes: "Crâne rasé ou coupe courte, bretelles, bottes. Le sens des symboles dépend entièrement de la scène : un même vêtement peut être apolitique, antiraciste ou néonazi."
+    music: "Ska, rocksteady, reggae, puis Oi!"
+    debates: "Appropriation du style par des groupes néonazis ; réaction des scènes traditionnelles et antiracistes."
+    lexicon: {Boots and braces: "bottes et bretelles", Trojan: "label de musique jamaïcaine, repère de la scène", Spirit of '69: "référence à l'origine multiculturelle"}
+    refs:
+      - {t: Wikipedia - Skinhead, u: "https://en.wikipedia.org/wiki/Skinhead"}
+  - id: sharp
+    name: SHARP (Skinheads Against Racial Prejudice)
+    family: skinhead antiraciste
+    history: "Fondé à New York en 1987 par des skinheads qui voulaient défendre l'identité d'origine non raciste contre l'extrême droite."
+    values: "Antiracisme, fierté ouvrière, retour aux racines jamaïcaines. Se définissent comme apolitiques sur le plan partisan mais explicitement antiracistes."
+    codes: "Emblème « SHARP » ; style skinhead traditionnel."
+    music: "Ska, rocksteady, Oi!, punk."
+    debates: "Distinction avec RASH (plus à gauche) et avec les boneheads néonazis."
+    lexicon: {}
+    refs:
+      - {t: Wikipedia - Skinheads Against Racial Prejudice, u: "https://en.wikipedia.org/wiki/Skinheads_Against_Racial_Prejudice"}
+  - id: rash
+    name: RASH (Red and Anarchist Skinheads)
+    family: skinhead de gauche radicale
+    history: "Réseau né au début des années 1990 (Canada, puis Europe) de skinheads anarchistes, communistes et antiautoritaires."
+    values: "Anticapitalisme, antifascisme actif, solidarité de classe. Plus politisé que SHARP."
+    codes: "Drapeaux rouge et noir, symboles anarchistes ou communistes."
+    music: "Oi!, punk, hardcore."
+    debates: "Tensions historiques avec les néonazis ; débat sur la violence."
+    lexicon: {}
+    refs:
+      - {t: Wikipedia - Red and Anarchist Skinheads, u: "https://en.wikipedia.org/wiki/Red_and_Anarchist_Skinheads"}
+  - id: boneheads
+    name: Boneheads / skinheads néonazis (RAC, White Power)
+    family: extrême droite néonazie
+    history: "Apparus à la fin des années 1970 et dans les années 1980 en Europe et aux États-Unis ; terme « boneheads » employé par les skinheads traditionnels pour s'en démarquer."
+    values: "Idéologie raciste et suprémaciste. Les scènes skinhead traditionnelles et antiracistes les rejettent."
+    codes: "Symboles néonazis (croix gammées, 88, etc.). Il est essentiel de les distinguer des skinheads traditionnels."
+    music: "Rock Against Communism (RAC), Blood & Honour (réseau)."
+    debates: "Le grand public confond souvent « skinhead » et néonazi ; SHARP et RASH existent justement pour contrer cet amalgame."
+    lexicon: {}
+    refs:
+      - {t: Wikipedia - Blood & Honour, u: "https://en.wikipedia.org/wiki/Blood_%26_Honour"}
+  - id: punk
+    name: Punk
+    family: contre-culture
+    history: "Émerge au milieu des années 1970 à New York et à Londres (Ramones, Sex Pistols, The Clash)."
+    values: "DIY (« do it yourself »), rejet de l'autorité, anticonformisme, liberté individuelle."
+    codes: "Cuir, épingles, crêtes, patches, fanzines ; le look varie selon les époques et les régions."
+    music: "Punk rock, anarcho-punk (Crass), puis hardcore, Oi! et autres dérivés."
+    debates: "Authenticité vs. récupération commerciale ; politisation (anarcho-punk) vs. nihilisme."
+    lexicon: {DIY: "faire soi-même", Squat: "occupation d'un bâtiment comme lieu de vie/concert"}
+    refs:
+      - {t: Wikipedia - Punk subculture, u: "https://en.wikipedia.org/wiki/Punk_subculture"}
+  - id: hardcore
+    name: Hardcore punk
+    family: punk radicalisé / DIY
+    history: "Né au début des années 1980 aux États-Unis (Black Flag, Minor Threat, Bad Brains), plus rapide et plus dur que le punk."
+    values: "DIY, communauté, scène locale ; courants variés (straight edge, politique de gauche, etc.)."
+    codes: "Shows en petites salles, pit, shirts de groupes, fanzines."
+    music: "Hardcore, post-hardcore, metalcore, crust, powerviolence."
+    debates: "Violence dans les pits, politique et inclusion, commercialisation."
+    lexicon: {"Straight edge": "mode de vie sans alcool ni drogues"}
+    refs:
+      - {t: Wikipedia - Hardcore punk, u: "https://en.wikipedia.org/wiki/Hardcore_punk"}
+  - id: oi
+    name: Oi!
+    family: punk de rue ouvrier
+    history: "Né vers 1977-1980 au Royaume-Uni à partir de groupes comme Cock Sparrer et The 4-Skins ; terme popularisé par le journaliste Garry Bushell."
+    values: "Voix de la rue ouvrière, camaraderie. Le mouvement a toujours revendiqué son rejet du racisme malgré l'infiltration d'une minorité."
+    codes: "Mélange de looks punk et skinhead."
+    music: "Punk à refrains scandés, hymnes de stade."
+    debates: "Association injuste ou réelle avec l'extrême droite selon les années ; émeute de Southall (1981)."
+    lexicon: {}
+    refs:
+      - {t: Wikipedia - Oi!, u: "https://en.wikipedia.org/wiki/Oi!"}
+  - id: ultras
+    name: Ultras (football)
+    family: supporters organisés
+    history: "Groupes de supporters nés en Italie dans les années 1960 puis répandus dans toute l'Europe et au-delà."
+    values: "Soutien inconditionnel au club, fierté du quartier, rivalités ; positions politiques très variables selon les groupes."
+    codes: "Tifos, bâches, chants, fumigènes, écharpes."
+    music: "Chants collectifs de tribune."
+    debates: "Violence, relations avec les clubs, politisation de certains groupes (extrême droite ou antifascistes)."
+    lexicon: {Tifo: "chorégraphie visuelle de tribune"}
+    refs:
+      - {t: Wikipedia - Ultras, u: "https://en.wikipedia.org/wiki/Ultras"}
+  - id: antifa
+    name: Antifa / antifascisme militant
+    family: gauche radicale
+    history: "Racines dans l'antifascisme européen des années 1920-30 ; réseaux militants contemporains à partir des années 1980 face à l'extrême droite violente."
+    values: "S'opposer activement au fascisme et au racisme, parfois par l'action directe."
+    codes: "Drapeaux rouge et noir, logo des deux drapeaux, tenues sombres lors d'actions."
+    music: "Punk, hardcore, Oi!, rap selon les scènes."
+    debates: "Légitimité de la violence politique ; surveillance, fichage et qualification légale ('terrorisme' pour certains États)."
+    lexicon: {}
+    refs:
+      - {t: Wikipedia - Anti-fascism, u: "https://en.wikipedia.org/wiki/Anti-fascism"}
+  - id: collages
+    name: Collages féministes
+    family: féminisme / affichage politique
+    history: "Collectifs de militantes affichant sur les murs des messages contre les féminicides, apparus en France en 2019 et essaimés en Europe."
+    values: "Visibilité des victimes, dénonciation des violences sexistes et sexuelles."
+    codes: "Lettres noires sur feuilles blanches A4 assemblées en slogans."
+    music: ""
+    debates: "Débats juridiques sur l'affichage sauvage, controverses sur certains slogans."
+    lexicon: {Féminicide: "meurtre d'une femme en raison de son genre"}
+    refs:
+      - {t: Wikipédia - Collages féministes, u: "https://fr.wikipedia.org/wiki/Collages_f%C3%A9ministes"}

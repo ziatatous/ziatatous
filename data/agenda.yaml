@@ -1,0 +1,19 @@
+# Agendas publics.
+# 1) `sources` : calendriers ICS ou flux RSS d'agendas publics (salles, collectifs, centres sociaux).
+#    Colle l'URL ICS/RSS publique d'une salle ou d'un collectif, puis `enabled: true`.
+# 2) `manual` : événements annoncés publiquement que tu ajoutes toi-même (avec lien source).
+# Si rien n'est configuré, la page Terrain affiche « rien d'annoncé ».
+sources:
+  - id: exemple_ics
+    name: Exemple - agenda d'une salle (remplace l'URL)
+    url: "https://example.org/agenda.ics"
+    kind: ics        # ics | rss
+    city: madrid
+    type: concert    # manifestation | concert | rassemblement | collage | festival | assemblée | other
+    scene: punk
+    page: "https://example.org"
+    enabled: false
+manual: []
+# Exemple :
+# - {title: "Concert hardcore - Sala X", start: "2026-11-15T21:00", place: "Sala X, Madrid", city: madrid,
+#    type: concert, scene: hardcore, link: "https://url-de-l-annonce-publique"}
