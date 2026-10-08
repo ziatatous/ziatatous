@@ -14,4 +14,4 @@ Mets à jour ce fichier avec les flux morts remplacés (page Système).
 | Surveillance / libertés | La Quadrature du Net, EFF, Amnesty, Access Now, EDRi, Statewatch, HRW, Xnet, Derechos Digitales |
 | Scènes | Radio Vallekas |
 | Cartes | OpenStreetMap (tuiles) via Leaflet — respecter leur politique d'usage pour un usage personnel léger |
-| Fiches | Liens Wikipédia (licence CC BY-SA) : voir le champ `refs` de chaque fiche |
+| 

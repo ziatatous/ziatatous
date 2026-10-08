@@ -1,0 +1,41 @@
+# Mots signalant une action de rue dans un titre/résumé (minuscules, sous-chaîne). Modifiable.
+action:
+  - manifestation
+  - manifestant
+  - grève
+  - émeute
+  - affrontement
+  - blocage
+  - gaz lacrymogène
+  - occupation
+  - cortège
+  - rassemblement
+  - protest
+  - riot
+  - strike
+  - demonstrat
+  - clashes
+  - unrest
+  - uprising
+  - tear gas
+  - blockade
+  - manifestación
+  - manifestantes
+  - huelga
+  - disturbios
+  - concentración
+  - cargas policiales
+  - manifestazione
+  - corteo
+  - scontri
+  - sciopero
+  - demonstration
+  - ausschreitungen
+  - streik
+  - protesto
+  - greve
+  - marcha
+  - paro
+  - διαδήλωση
+  - επεισόδια
+  - απεργία

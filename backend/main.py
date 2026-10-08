@@ -57,6 +57,11 @@ def init_db():
         CREATE TABLE IF NOT EXISTS notes(key TEXT PRIMARY KEY, text TEXT, updated TEXT);
         """
         )
+        for col in ("country TEXT DEFAULT ''", "action INTEGER DEFAULT 0"):  # migrate older databases
+            try:
+                c.execute("ALTER TABLE items ADD COLUMN " + col)
+            except sqlite3.OperationalError:
+                pass
 
 
 def now():
@@ -87,12 +92,16 @@ def allowed(url):
     return _robots[host].can_fetch(UA, url)
 
 
-def fetch(url):
-    if not allowed(url):
+def fetch(url, robots=True):
+    if robots and not allowed(url):
         raise RuntimeError("bloqué par robots.txt")
     r = httpx.get(url, timeout=20, headers={"User-Agent": UA}, follow_redirects=True)
     r.raise_for_status()
     return r.text
+
+
+def action_words():
+    return [w.lower() for w in (load_yaml("keywords.yaml").get("action") or [])]
 
 
 def record(c, sid, name, kind, ok, count, err=""):
@@ -105,7 +114,8 @@ def record(c, sid, name, kind, ok, count, err=""):
 def collect_feed(f):
     with db() as c:
         try:
-            parsed = feedparser.parse(fetch(f["url"]))
+            parsed = feedparser.parse(fetch(f["url"], not f.get("ignore_robots")))
+            words = action_words()
             if not parsed.entries:
                 raise RuntimeError("aucun article trouvé (flux vide ou invalide)")
             n = 0
@@ -115,11 +125,16 @@ def collect_feed(f):
                     continue
                 pub = e.get("published_parsed") or e.get("updated_parsed")
                 pub = dt.datetime(*pub[:6]).isoformat() if pub else now()
+                title, summ = clean(e.get("title"), 300), clean(e.get("summary"))
+                text = (title + " " + summ).lower()
+                act = int(any(w in text for w in words))  # simple keyword match, no AI
                 cur = c.execute(
-                    "INSERT OR IGNORE INTO items(link,title,summary,published,first_seen,source_id,source,orient,category,lang)"
-                    " VALUES(?,?,?,?,?,?,?,?,?,?)",
-                    (link, clean(e.get("title"), 300), clean(e.get("summary")), pub, now(), f["id"],
-                     f["name"], f.get("orient", ""), f.get("category", "general"), f.get("lang", "")),
+                    "INSERT INTO items(link,title,summary,published,first_seen,source_id,source,orient,category,lang,country,action)"
+                    " VALUES(?,?,?,?,?,?,?,?,?,?,?,?)"
+                    " ON CONFLICT(link) DO UPDATE SET country=excluded.country, action=excluded.action",
+                    (link, title, summ, pub, now(), f["id"],
+                     f["name"], f.get("orient", ""), f.get("category", "general"), f.get("lang", ""),
+                     f.get("country", ""), act),
                 )
                 n += cur.rowcount
             record(c, f["id"], f["name"], "rss", True, len(parsed.entries))
@@ -198,15 +213,33 @@ def collect_all():
 # ---------- API ----------
 @app.get("/api/data/{name}")
 def get_data(name: str):
-    if name not in ("mouvements", "scenes", "annuaire", "surveillance", "cities"):
+    if name not in ("annuaire", "cities"):
         raise HTTPException(404)
-    fname = {"annuaire": "scenes_annuaire.yaml"}.get(name, f"{name}.yaml")
-    return load_yaml(fname)
+    return load_yaml({"annuaire": "scenes_annuaire.yaml"}.get(name, f"{name}.yaml"))
+
+
+@app.get("/api/active")
+def active(hours: int = 72):
+    """Countries ranked by number of recent articles containing action words (strike, riot, protest...)."""
+    since = (dt.datetime.utcnow() - dt.timedelta(hours=hours)).isoformat()
+    with db() as c:
+        rows = c.execute(
+            "SELECT country, COUNT(*) n FROM items WHERE action=1 AND published>=? GROUP BY country ORDER BY n DESC",
+            (since,),
+        )
+        return [dict(r) for r in rows]
 
 
 @app.get("/api/items")
-def items(category: str = "", orient: str = "", q: str = "", limit: int = 80):
+def items(category: str = "", orient: str = "", q: str = "", country: str = "", hours: int = 0,
+          action: bool = False, limit: int = 80):
     sql, args = "SELECT * FROM items WHERE 1=1", []
+    if country:
+        sql += " AND country=?"; args.append(country)
+    if hours:
+        sql += " AND published>=?"; args.append((dt.datetime.utcnow() - dt.timedelta(hours=hours)).isoformat())
+    if action:
+        sql += " AND action=1"
     if category:
         sql += " AND category=?"; args.append(category)
     if orient:

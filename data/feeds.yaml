@@ -13,24 +13,24 @@ feeds:
   - {id: rfi, name: RFI, url: "https://www.rfi.fr/fr/rss", orient: généraliste, category: mouvements, lang: fr}
   # --- Gauche / gauche radicale / libertaire ---
   - {id: eldiario, name: elDiario.es, url: "https://www.eldiario.es/rss/", orient: gauche, category: mouvements, lang: es}
-  - {id: publico, name: Público, url: "https://www.publico.es/rss", orient: gauche, category: mouvements, lang: es}
-  - {id: elsalto, name: El Salto, url: "https://www.elsaltodiario.com/feed", orient: gauche radicale, category: mouvements, lang: es}
-  - {id: ctxt, name: CTXT, url: "https://ctxt.es/es/?format=feed&type=rss", orient: gauche, category: mouvements, lang: es}
+  - {id: publico, name: Público, url: "https://www.publico.es/rss", orient: gauche, category: mouvements, lang: es, enabled: false}
+  - {id: elsalto, name: El Salto, url: "https://www.elsaltodiario.com/feed", orient: gauche radicale, category: mouvements, lang: es, enabled: false}
+  - {id: ctxt, name: CTXT, url: "https://ctxt.es/es/?format=feed&type=rss", orient: gauche, category: mouvements, lang: es, enabled: false}
   - {id: lamarea, name: La Marea, url: "https://www.lamarea.com/feed/", orient: gauche, category: mouvements, lang: es}
   - {id: lundimatin, name: Lundi Matin, url: "https://lundi.am/spip.php?page=backend", orient: gauche radicale, category: mouvements, lang: fr}
   - {id: reporterre, name: Reporterre, url: "https://reporterre.net/spip.php?page=backend", orient: gauche, category: mouvements, lang: fr}
-  - {id: basta, name: Basta!, url: "https://basta.media/spip.php?page=backend", orient: gauche, category: mouvements, lang: fr}
+  - {id: basta, name: Basta!, url: "https://basta.media/spip.php?page=backend", orient: gauche, category: mouvements, lang: fr, enabled: false}
   - {id: crimethinc, name: CrimethInc., url: "https://crimethinc.com/feed", orient: libertaire, category: mouvements, lang: en}
-  - {id: itsgoingdown, name: It's Going Down, url: "https://itsgoingdown.org/feed/", orient: libertaire, category: mouvements, lang: en}
+  - {id: itsgoingdown, name: It's Going Down, url: "https://itsgoingdown.org/feed/", orient: libertaire, category: mouvements, lang: en, enabled: false}
   - {id: jacobin, name: Jacobin, url: "https://jacobin.com/feed", orient: gauche, category: mouvements, lang: en}
   # --- Droite / extrême droite (pluralité, étiquetés) ---
   - {id: figaro, name: Le Figaro - À la une, url: "https://www.lefigaro.fr/rss/figaro_actualites-a-la-une.xml", orient: droite, category: mouvements, lang: fr}
-  - {id: libertaddigital, name: Libertad Digital, url: "https://www.libertaddigital.com/rss/", orient: droite, category: mouvements, lang: es}
+  - {id: libertaddigital, name: Libertad Digital, url: "https://www.libertaddigital.com/rss/", orient: droite, category: mouvements, lang: es, enabled: false}
   - {id: breizhinfo, name: Breizh-info, url: "https://www.breizh-info.com/feed/", orient: extrême droite, category: mouvements, lang: fr}
   # --- Libertés publiques / surveillance ---
   - {id: quadrature, name: La Quadrature du Net, url: "https://www.laquadrature.net/feed/", orient: ONG, category: surveillance, lang: fr}
   - {id: eff, name: EFF Deeplinks, url: "https://www.eff.org/rss/updates.xml", orient: ONG, category: surveillance, lang: en}
-  - {id: amnesty, name: Amnesty International, url: "https://www.amnesty.org/en/latest/news/feed/", orient: ONG, category: surveillance, lang: en}
+  - {id: amnesty, name: Amnesty International, url: "https://www.amnesty.org/en/latest/news/feed/", orient: ONG, category: surveillance, lang: en, enabled: false}
   - {id: accessnow, name: Access Now, url: "https://www.accessnow.org/feed/", orient: ONG, category: surveillance, lang: en}
   - {id: edri, name: EDRi, url: "https://edri.org/feed/", orient: ONG, category: surveillance, lang: en}
   - {id: statewatch, name: Statewatch, url: "https://www.statewatch.org/rss", orient: ONG, category: surveillance, lang: en}
@@ -39,3 +39,23 @@ feeds:
   - {id: derechosdigitales, name: Derechos Digitales, url: "https://www.derechosdigitales.org/feed/", orient: ONG, category: surveillance, lang: es}
   # --- Scènes / radios ---
   - {id: radiovallekas, name: Radio Vallekas, url: "https://www.radiovallekas.org/feed/", orient: indépendant, category: scenes, lang: es}
+
+  # --- LIVE par pays : recherches Google News (flux RSS publics), mots d'action des 7 derniers jours ---
+  # `ignore_robots: true` : Google News RSS est fait pour les lecteurs de flux ; son robots.txt bloque les robots génériques.
+  - {id: gn_fr, name: "Live FR", url: "https://news.google.com/rss/search?q=manifestation+OR+grève+OR+émeutes+OR+blocage+OR+affrontements+when:7d&hl=fr&gl=FR&ceid=FR:fr", orient: généraliste, category: mouvements, country: FR, ignore_robots: true}
+  - {id: gn_es, name: "Live ES", url: "https://news.google.com/rss/search?q=manifestación+OR+huelga+OR+disturbios+OR+concentración+OR+cargas+policiales+when:7d&hl=es&gl=ES&ceid=ES:es", orient: généraliste, category: mouvements, country: ES, ignore_robots: true}
+  - {id: gn_madrid, name: "Live MADRID", url: "https://news.google.com/rss/search?q=manifestación+Madrid+OR+concentración+Madrid+OR+huelga+Madrid+when:7d&hl=es&gl=ES&ceid=ES:es", orient: généraliste, category: mouvements, country: ES, ignore_robots: true}
+  - {id: gn_gb, name: "Live GB", url: "https://news.google.com/rss/search?q=protest+OR+riot+OR+strike+OR+demonstration+OR+clashes+when:7d&hl=en&gl=GB&ceid=GB:en", orient: généraliste, category: mouvements, country: GB, ignore_robots: true}
+  - {id: gn_us, name: "Live US", url: "https://news.google.com/rss/search?q=protest+OR+riot+OR+strike+OR+demonstration+OR+clashes+when:7d&hl=en&gl=US&ceid=US:en", orient: généraliste, category: mouvements, country: US, ignore_robots: true}
+  - {id: gn_de, name: "Live DE", url: "https://news.google.com/rss/search?q=Demonstration+OR+Protest+OR+Ausschreitungen+OR+Streik+when:7d&hl=de&gl=DE&ceid=DE:de", orient: généraliste, category: mouvements, country: DE, ignore_robots: true}
+  - {id: gn_it, name: "Live IT", url: "https://news.google.com/rss/search?q=manifestazione+OR+corteo+OR+scontri+OR+sciopero+when:7d&hl=it&gl=IT&ceid=IT:it", orient: généraliste, category: mouvements, country: IT, ignore_robots: true}
+  - {id: gn_gr, name: "Live GR", url: "https://news.google.com/rss/search?q=διαδήλωση+OR+επεισόδια+OR+απεργία+OR+πορεία+when:7d&hl=el&gl=GR&ceid=GR:el", orient: généraliste, category: mouvements, country: GR, ignore_robots: true}
+  - {id: gn_pt, name: "Live PT", url: "https://news.google.com/rss/search?q=manifestação+OR+greve+OR+protesto+when:7d&hl=pt-PT&gl=PT&ceid=PT:pt", orient: généraliste, category: mouvements, country: PT, ignore_robots: true}
+  - {id: gn_br, name: "Live BR", url: "https://news.google.com/rss/search?q=protesto+OR+manifestação+OR+greve+OR+confronto+when:7d&hl=pt-BR&gl=BR&ceid=BR:pt", orient: généraliste, category: mouvements, country: BR, ignore_robots: true}
+  - {id: gn_ar, name: "Live AR", url: "https://news.google.com/rss/search?q=protesta+OR+manifestación+OR+paro+OR+represión+when:7d&hl=es-419&gl=AR&ceid=AR:es", orient: généraliste, category: mouvements, country: AR, ignore_robots: true}
+  - {id: gn_cl, name: "Live CL", url: "https://news.google.com/rss/search?q=protesta+OR+marcha+OR+manifestación+OR+disturbios+when:7d&hl=es-419&gl=CL&ceid=CL:es", orient: généraliste, category: mouvements, country: CL, ignore_robots: true}
+  - {id: gn_mx, name: "Live MX", url: "https://news.google.com/rss/search?q=protesta+OR+marcha+OR+manifestación+OR+bloqueo+when:7d&hl=es-419&gl=MX&ceid=MX:es", orient: généraliste, category: mouvements, country: MX, ignore_robots: true}
+  - {id: gn_co, name: "Live CO", url: "https://news.google.com/rss/search?q=protesta+OR+paro+OR+manifestación+OR+disturbios+when:7d&hl=es-419&gl=CO&ceid=CO:es", orient: généraliste, category: mouvements, country: CO, ignore_robots: true}
+  - {id: gn_world, name: "Live WORLD", url: "https://news.google.com/rss/search?q=protest+OR+riot+OR+uprising+OR+unrest+OR+%22general+strike%22+when:7d&hl=en&gl=US&ceid=US:en", orient: généraliste, category: mouvements, country: WORLD, ignore_robots: true}
+  - {id: gn_ir, name: "Live IR", url: "https://news.google.com/rss/search?q=Iran+protest+OR+Iran+unrest+when:7d&hl=en&gl=US&ceid=US:en", orient: généraliste, category: mouvements, country: IR, ignore_robots: true}
+  - {id: gn_fr-zad, name: "Live FR-ZAD", url: "https://news.google.com/rss/search?q=ZAD+OR+antifasciste+OR+%22black+bloc%22+OR+autonomes+OR+squat+expulsion+when:7d&hl=fr&gl=FR&ceid=FR:fr", orient: généraliste, category: mouvements, country: FR, ignore_robots: true}

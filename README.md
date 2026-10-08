@@ -14,37 +14,32 @@ http://127.0.0.1:8000 et ouvre le navigateur. Arrêt : `Ctrl+C`.
 Au premier lancement, la collecte démarre toute seule (quelques minutes). Ensuite : toutes les 3 h
 tant que le programme tourne, avec rattrapage au démarrage.
 
+## Ce que c'est maintenant : un tableau de bord LIVE
+Pas d'historique ni de guides. Uniquement ce qui se passe :
+- **Mouvements actifs** : les pays classés par nombre d'articles d'action (manifestation, grève, émeutes, protest, riot, huelga…) sur 24 h / 72 h / 7 j. Clique un pays pour lire les articles.
+- **Live** (accueil) : les derniers articles d'action des 48 dernières heures + événements à venir.
+- **Terrain** : carte + agenda des événements annoncés publiquement, annuaire de canaux publics.
+- **Surveillance** : fil d'actu sur les libertés publiques (ONG).
+
 ## Où est quoi
 | Fichier | Rôle |
 |---|---|
-| `data/feeds.yaml` | flux RSS (nom, URL, orientation, rubrique) — **à toi de modifier** |
-| `data/agenda.yaml` | agendas ICS/RSS publics + événements saisis à la main (Terrain) |
-| `data/mouvements.yaml` · `scenes.yaml` · `surveillance.yaml` | contenu des fiches |
-| `data/scenes_annuaire.yaml` | annuaire de canaux publics par ville |
-| `data/cities.yaml` | villes (centre de carte) |
-| `backend/main.py` | tout le backend (API + collecte) |
-| `frontend/` | interface (HTML/CSS/JS, aucune étape de build) |
+| `data/feeds.yaml` | tes flux : médias + recherches Google News par pays (`gn_*`) |
+| `data/keywords.yaml` | mots qui déclenchent « action de rue » (multilingue) |
+| `data/agenda.yaml` | agendas ICS/RSS publics + événements saisis à la main |
+| `data/scenes_annuaire.yaml` · `cities.yaml` | annuaire de canaux, villes |
+| `backend/main.py` | tout le backend · `frontend/` : l'interface |
 
-## Points d'attention (honnêteté)
-- **Les URLs des flux n'ont pas pu être testées** pendant l'écriture (réseau bloqué). Ouvre la page
-  **Système → Collecter maintenant** : les flux morts apparaissent en rouge avec l'erreur. Remplace-les ou
-  mets `enabled: false` dans `feeds.yaml`.
-- **Les fiches sont des résumés de départ écrits à la main** (pas générés à l'exécution), avec leurs liens de
-  référence. Relis-les, corrige-les et complète-les. Les liens Wikipédia n'ont pas été vérifiés non plus.
-- **Terrain** : aucun agenda n'est configuré par défaut (je n'ai pas voulu inventer d'URL). Ajoute des
-  ICS/RSS publics de salles ou collectifs dans `agenda.yaml`, ou saisis des événements dans `manual:`.
-  Sans source : « Rien d'annoncé ».
-- Les écarts avec ton prompt, pour rester simple : interface en JS sans build (pas de Vite/React/Tailwind),
-  pas de galerie d'images (les droits des visuels sont à gérer toi-même : propose-moi de l'ajouter), PWA
-  minimale (manifest seulement).
+## Points d'attention
+- Les flux Google News (`gn_*`) sont la source « live » par pays. Pour ceux-là, `robots.txt` est ignoré (`ignore_robots: true`), car Google News RSS est prévu pour les lecteurs de flux. Retire ce réglage si tu préfères tout respecter.
+- Flux morts : voir **Système**. Désactive-les avec `enabled: false`. Ajoute un pays en copiant une ligne `gn_*`.
+- Le classement par pays dépend du mot-clé et du flux : c'est un indicateur, pas une vérité. Aucune IA.
+- **Terrain** est vide tant que tu n'ajoutes pas d'agendas dans `agenda.yaml` (aucune URL inventée).
+- Si tu as déjà une base : garde-la, les anciens articles seront re-étiquetés à la prochaine collecte.
 
 ## Sauvegarde
 Page Système : *Exporter la base* (fichier `.db` avec articles, événements et notes) / *Importer une base*.
 Tes fichiers `data/*.yaml` se sauvegardent en les copiant.
 
-## Notes perso
-Sur chaque fiche mouvement/scène, une zone « Mes notes » ; page **Notes** pour tout relire.
-
 ## Raccourcis
-`Ctrl/Cmd+K` : palette de commandes. Bouton *Mode calme* : coupe les animations (déjà respecté si ton
-système demande `prefers-reduced-motion`). Le glitch ne s'affiche que sur les articles apparus depuis ta dernière visite.
+`Ctrl/Cmd+K` : palette. *Mode calme* coupe les animations.
